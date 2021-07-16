@@ -1,0 +1,30 @@
+{% extends "recommendation_sys/base.html" %}
+{% block body_block %}
+
+	{% if rankings_KS %}
+		
+		By result alone
+		{% for rank in rankings_KS %}
+		{{ rank}}
+
+		{% endfor %}
+	{% endif %}
+	{% if rankings_P %}
+
+		By personality alone
+		{% for rank in rankings_P %}
+		{{ rank}}
+
+		{% endfor %}
+	{% endif %}
+	{% if rankings_P %}
+
+		by result and personality
+		{% for rank in rankings_KSP %}
+		{{ rank}}
+
+		{% endfor %}
+	{% endif %}
+
+
+{% endblock %}

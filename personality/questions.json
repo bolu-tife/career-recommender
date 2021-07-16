@@ -1,0 +1,730 @@
+
+{
+
+    "a" :
+[
+
+    {
+        "name": "Realistic1",
+        "label": "Build kitchen cabinets",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Realistic2",
+        "label": "Lay brick or tile",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Investigative1",
+        "label": "Develop a new medicine",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Investigative2",
+        "label": "Study ways to reduce water pollution",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Artistic1",
+        "label": "Write books or plays",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Artistic2",
+        "label": "Play a musical instrument",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Social1",
+        "label": "Teach an individual an exercise routine",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Social2",
+        "label": "Help people with personal or emotional problems",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Enterprising1",
+        "label": "Buy and sell stocks and bonds",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Enterprising2",
+        "label": "Manage a retail store",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Conventional1",
+        "label": "Develop a spreadsheet using computer software",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Conventional2",
+        "label": "Proofread records or forms",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+        {
+        "name": "Realistic3",
+        "label": "Repair household appliances",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Realistic4",
+        "label": "Raise fish in a fish hatchery",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Investigative3",
+        "label": "Conduct chemical experiments",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Investigative4",
+        "label": "Study the movement of planets",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Artistic3",
+        "label": "Compose or arrange music",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Artistic4",
+        "label": "Draw pictures",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Social3",
+        "label": "Give career guidance to people",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Social4",
+        "label": "Perform rehabilitation therapy",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Enterprising3",
+        "label": "Operate a beauty salon or barber shop",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Enterprising4",
+        "label": "Manage a department within a large company",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Conventional3",
+        "label": "Install software across computers on a large network",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Conventional4",
+        "label": "Operate a calculator",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+        {
+        "name": "Realistic5",
+        "label": "Assemble electronic parts",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Realistic6",
+        "label": "Drive a truck to deliver packages to offices and homes",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Investigative5",
+        "label": "Examine blood samples using a microscope",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Investigative6",
+        "label": "Investigate the cause of a fire",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Artistic5",
+        "label": "Create special effects for movies",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Artistic6",
+        "label": "Paint sets for plays",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Social5",
+        "label": "Do volunteer work at a non-profit organization",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Social6",
+        "label": "Teach children how to play sports",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Enterprising5",
+        "label": "Start your own business",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Enterprising6",
+        "label": "Negotiate business contracts",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Conventional5",
+        "label": "Keep shipping and receiving records",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Conventional6",
+        "label": "Calculate the wages of employees",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+        {
+        "name": "Realistic7",
+        "label": "Test the quality of parts before shipment",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Realistic8",
+        "label": "Repair and install locks",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Investigative7",
+        "label": "Develop a way to better predict the weather",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Investigative8",
+        "label": "Work in a biology lab",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Artistic7",
+        "label": "Write scripts for movies or television shows",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Artistic8",
+        "label": "Perform jazz or tap dance",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Social7",
+        "label": "Teach sign language to people who are deaf or hard of hearing",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Social8",
+        "label": "Help conduct a group therapy session",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Enterprising7",
+        "label": "Represent a client in a lawsuit",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Enterprising8",
+        "label": "Market a new line of clothing",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Conventional7",
+        "label": "Inventory supplies using a hand-held computer",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Conventional8",
+        "label": "Record rent payments",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+        {
+        "name": "Realistic9",
+        "label": "Set up and operate machines to make products",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Realistic10",
+        "label": "Put out forest fires",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Investigative9",
+        "label": "Invent a replacement for sugar",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Investigative10",
+        "label": "Do laboratory tests to identify diseases",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Artistic9",
+        "label": "Sing in a band",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Artistic10",
+        "label": "Edit movies",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Social9",
+        "label": "Take care of children at a day-care center",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Social10",
+        "label": "Teach a high-school class",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Enterprising9",
+        "label": "Sell merchandise at a department store",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Enterprising10",
+        "label": "Manage a clothing store",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Conventional9",
+        "label": "Keep inventory records",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    },
+    {
+        "name": "Conventional10",
+        "label": "Stamp, sort, and distribute mail for an organization",
+        "type": "radio",
+        "choices": [
+            {"name": "Strongly Dislike", "value":1},
+            {"name": "DisLike", "value":2},
+            {"name": "Unsure", "value":3},
+            {"name": "Like", "value":4},
+            {"name": "Strongly Like", "value":5}
+        ]
+    }
+]
+
+}
+

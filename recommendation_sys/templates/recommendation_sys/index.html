@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<a href="{% url 'admin:index' %}">Admin</a>
+	{% if user.is_authenticated %}
+        <a  href="{% url 'logout' %}">Logout</a>
+      {% else %}
+        <a href="{% url 'login' %}">Login</a>
+      {% endif %}
+
+Landing Page
+</body>
+</html>
