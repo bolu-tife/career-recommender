@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en" dir="ltr">
 
 <head>
@@ -14,22 +15,22 @@
     rel="stylesheet">
 
   <!-- Perfect Scrollbar -->
-  <link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+  <link type="text/css" href="{% static 'vendor/perfect-scrollbar.css' %}" rel="stylesheet">
 
   <!-- Fix Footer CSS -->
-  <link type="text/css" href="assets/vendor/fix-footer.css" rel="stylesheet">
+  <link type="text/css" href="{% static 'vendor/fix-footer.css' %}" rel="stylesheet">
 
   <!-- Material Design Icons -->
-  <link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
+  <link type="text/css" href="{% static 'css/material-icons.css' %}" rel="stylesheet">
 
   <!-- Font Awesome Icons -->
-  <link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
+  <link type="text/css" href="{% static 'css/fontawesome.css' %}" rel="stylesheet">
 
   <!-- Preloader -->
-  <link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
+  <link type="text/css" href="{% static 'css/preloader.css' %}" rel="stylesheet">
 
   <!-- App CSS -->
-  <link type="text/css" href="assets/css/app.css" rel="stylesheet">
+  <link type="text/css" href="{% static 'css/app.css' %}" rel="stylesheet">
 
 </head>
 
@@ -84,26 +85,26 @@
 
 
   <!-- jQuery -->
-  <script src="assets/vendor/jquery.min.js"></script>
+  <script src="{% static 'vendor/jquery.min.js' %}"></script>
 
   <!-- Bootstrap -->
-  <script src="assets/vendor/popper.min.js"></script>
-  <script src="assets/vendor/bootstrap.min.js"></script>
+  <script src="{% static 'vendor/popper.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap.min.js' %}"></script>
 
   <!-- Perfect Scrollbar -->
-  <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+  <script src="{% static 'vendor/perfect-scrollbar.min.js' %}"></script>
 
   <!-- DOM Factory -->
-  <script src="assets/vendor/dom-factory.js"></script>
+  <script src="{% static 'vendor/dom-factory.js' %}"></script>
 
   <!-- MDK -->
-  <script src="assets/vendor/material-design-kit.js"></script>
+  <script src="{% static 'vendor/material-design-kit.js' %}"></script>
 
   <!-- Fix Footer -->
-  <script src="assets/vendor/fix-footer.js"></script>
+  <script src="{% static 'vendor/fix-footer.js' %}"></script>
 
   <!-- App JS -->
-  <script src="assets/js/app.js"></script>
+  <script src="{% static 'js/app.js' %}"></script>
 
 
 </body>
