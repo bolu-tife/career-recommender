@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	 <a href="{% url 'studentdashboard' %}">Home</a>
-    {% if user.is_authenticated %}
-        <a  href="{% url 'logout' %}">Logout</a>
-      {% else %}
-        <a href="{% url 'login' %}">Login</a>
-      {% endif %}
+{% extends "personality/base.html" %}
 
-
-	<form role="form" method="POST" action="{% url 'personality:test' %}" enctype="multipart/form-data">
-                        {% csrf_token %}
-{{form}}
-{{data}}
-<button type="submit" class="btn btn-primary">{{ "Add" }}</button>
-</body>
-</html>
+{% block body_block %}
+<div class="card card-body mb-32pt">
+  <form role="form" method="POST" action="{% url 'personality:test' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit" class="btn btn-primary">{{ "Add" }}</button>
+  </form>
+</div>
+{% endblock body_block %}
