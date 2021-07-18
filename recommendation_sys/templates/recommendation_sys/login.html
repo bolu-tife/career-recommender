@@ -1,27 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
+
 <head>
-  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Login</title>
+
+  <!-- Prevent the demo from appearing in search engines -->
+  <meta name="robots" content="noindex">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap"
+    rel="stylesheet">
+
+  <!-- Perfect Scrollbar -->
+  <link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+
+  <!-- Fix Footer CSS -->
+  <link type="text/css" href="assets/vendor/fix-footer.css" rel="stylesheet">
+
+  <!-- Material Design Icons -->
+  <link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
+
+  <!-- Preloader -->
+  <link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
+
+  <!-- App CSS -->
+  <link type="text/css" href="assets/css/app.css" rel="stylesheet">
+
 </head>
-<body>
+
+<body class="layout-default layout-login-centered-boxed">
+
+  <div class="layout-login-centered-boxed__form card">
+    <div class="d-flex flex-column justify-content-center align-items-center mt-2 mb-5 navbar-light">
+      <a href="learnly-index.html" class="navbar-brand flex-column mb-2 align-items-center mr-0" style="min-width: 0">
+
+        <span class="avatar avatar-sm navbar-brand-icon mr-0">
+
+          <span class="avatar-title rounded bg-primary"><img src="assets/images/illustration/student/128/white.svg"
+              alt="logo" class="img-fluid" /></span>
+
+        </span>
+
+        Luma
+      </a>
+      <p class="m-0">Login to access your Luma Account </p>
+    </div>
+
+    <form action="{% url 'login' %}" novalidate>
+      {% csrf_token %}
+      <div class="form-group">
+        <label class="text-label" for="username">Username::</label>
+        <div class="input-group input-group-merge">
+          <input type="text" name="username" placeholder="Username" class="form-control form-control-prepended">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <span class="far fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="text-label" for="password">Password:</label>
+        <div class="input-group input-group-merge">
+          <input type="password" name="password" required="" class="form-control form-control-prepended"
+            placeholder="Enter your password">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <span class="fa fa-key"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-block btn-primary" type="submit">Login</button>
+    </form>
+  </div>
 
 
-      </form>
+  <!-- jQuery -->
+  <script src="assets/vendor/jquery.min.js"></script>
 
-      <h1>Please Login</h1>
+  <!-- Bootstrap -->
+  <script src="assets/vendor/popper.min.js"></script>
+  <script src="assets/vendor/bootstrap.min.js"></script>
 
-        <form method="post" action="{% url 'login' %}">
-          {% csrf_token %}
-          {# A more "HTML" way of creating the login form#}
-          <label for="username">Username:</label>
-          <input type="text" name="username" placeholder="Username">
+  <!-- Perfect Scrollbar -->
+  <script src="assets/vendor/perfect-scrollbar.min.js"></script>
 
-          <label for="password"></label>
-          <input type="password" name="password">
+  <!-- DOM Factory -->
+  <script src="assets/vendor/dom-factory.js"></script>
 
-          <input type="submit" name="" value="Login">
+  <!-- MDK -->
+  <script src="assets/vendor/material-design-kit.js"></script>
 
-        </form>
+  <!-- Fix Footer -->
+  <script src="assets/vendor/fix-footer.js"></script>
+
+  <!-- App JS -->
+  <script src="assets/js/app.js"></script>
+
 
 </body>
+
 </html>
