@@ -70,13 +70,16 @@ def rankings(request):
         record[4] = results[0]['Enterprising']
         record[5] = results[0]['Conventional']
 
-    print(career_acad('0'))
-    rankings_KS = career_acad('0')
-    rankings_P = career_person('0', record)
-    rankings_KSP = career_know_skill_personality('0', record)
+
+    careerdes_KS, rankings_KS = career_acad('0')
+    careerdes_P,rankings_P = career_person('0', record)
+    careerdes_KSP,rankings_KSP = career_know_skill_personality('0', record)
     context = {
         "rankings_KS": rankings_KS,
         "rankings_P": rankings_P,
         "rankings_KSP": rankings_KSP,
+        "careerdes_KS": careerdes_KS,
+        "careerdes_P": careerdes_P,
+        "careerdes_KSP": careerdes_KSP,
     }
     return render(request, "recommendation_sys/rankings.html", context)
