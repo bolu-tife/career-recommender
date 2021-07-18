@@ -10,7 +10,7 @@ from personality.models import User_Personality
 
 
 def index(request):
-    return render(request, 'recommendation_sys/base.html')
+    return render(request, 'recommendation_sys/index.html')
 
 
 def login(request):
