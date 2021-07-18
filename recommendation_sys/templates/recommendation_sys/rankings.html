@@ -1,4 +1,8 @@
+
 {% extends "recommendation_sys/base.html" %}
+{% load static %}
+<link type="text/css" href="{% static 'css/ranking.css' %}" rel="stylesheet">
+
 {% block body_block %}
 
 	{% if rankings_KS %}
@@ -25,6 +29,63 @@
 
 		{% endfor %}
 	{% endif %}
+
+<div class="courses-container">
+	<div class="course">
+		<div class="course-preview">
+			<h6 style="color: #ffffff;font-size: 1.3rem;">#1</h6>
+			<h2 style="color: #ffffff;">Software Engineering</h2>
+			
+		</div>
+		<div class="course-info">
+			
+			<h6>Description</h6>
+			<h2 class="rank-h2" style="
+    font-size: 1.2em;margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px;margin-inline-end: 0px;font-weight: bold;color: #000000;
+">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos consectetur doloremque modi accusamus voluptates. Id fugiat aliquid cumque facilis veritatis, a, minima iure doloribus deserunt ea, aspernatur nulla quia laudantium.</h2>
+			<!--<button class="btn">Continue</button> -->
+		</div>
+		
+	</div>
+</div>
+<a href="#">View all chapters <i class="fas fa-chevron-right"></i></a>
+<!-- SOCIAL PANEL HTML -->
+<div class="social-panel-container">
+	<div class="social-panel">
+		<p>Created with <i class="fa fa-heart"></i> by
+			<a target="_blank" href="https://florin-pop.com">Florin Pop</a></p>
+		<button class="close-btn"><i class="fas fa-times"></i></button>
+		<h4>Get in touch on</h4>
+		<ul>
+			<li>
+				<a href="https://www.patreon.com/florinpop17" target="_blank">
+					<i class="fab fa-discord"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/florinpop1705" target="_blank">
+					<i class="fab fa-twitter"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://linkedin.com/in/florinpop17" target="_blank">
+					<i class="fab fa-linkedin"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://facebook.com/florinpop17" target="_blank">
+					<i class="fab fa-facebook"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://instagram.com/florinpop17" target="_blank">
+					<i class="fab fa-instagram"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
 
 
 {% endblock %}
