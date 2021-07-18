@@ -71,15 +71,20 @@ def rankings(request):
         record[5] = results[0]['Conventional']
 
 
-    careerdes_KS, rankings_KS = career_acad('0')
-    careerdes_P,rankings_P = career_person('0', record)
-    careerdes_KSP,rankings_KSP = career_know_skill_personality('0', record)
+    # careerdes_KS, rankings_KS = career_acad('0')
+    # careerdes_P,rankings_P = career_person('0', record)
+    # careerdes_KSP,rankings_KSP = career_know_skill_personality('0', record)
+
+    # careerdes_KS, rankings_KS = career_acad('0')
+    # careerdes_P,rankings_P = career_person('0', record)
+    # careerdes_KSP,rankings_KSP = career_know_skill_personality('0', record)
     context = {
-        "rankings_KS": rankings_KS,
-        "rankings_P": rankings_P,
-        "rankings_KSP": rankings_KSP,
-        "careerdes_KS": careerdes_KS,
-        "careerdes_P": careerdes_P,
-        "careerdes_KSP": careerdes_KSP,
+        # "rankings_KS": rankings_KS[:3],
+        # "rankings_P": rankings_P[:3],
+        # "rankings_KSP": rankings_KSP[:3],
+        "rankings_KS": career_acad('0')[:3]
+        # "careerdes_KS": careerdes_KS[:3],
+        # "careerdes_P": careerdes_P[:3],
+        # "careerdes_KSP": careerdes_KSP[:3],
     }
     return render(request, "recommendation_sys/rankings.html", context)

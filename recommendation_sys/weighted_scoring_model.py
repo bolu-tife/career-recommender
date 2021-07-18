@@ -84,7 +84,7 @@ def career_know_skill_personality(student_id,personality_result):
     careerdes = [career_dic['Description'][i]for i in top_10_for_student_id[:10]]
     print(top_10_for_student_id)
     print(career_rankings)
-    return [careerList[i]for i in top_10_for_student_id[:10]], careerdes
+    return  [(careerList[i], career_dic['Description'][i]) for i in top_10_for_student_id[:10]]
 
 
 
@@ -134,8 +134,9 @@ def career_acad(student_id):
     print(career_dic)
     careerdes = [career_dic['Description'][i]for i in top_10_for_student_id[:10]]
     print(career_rankings)
-    print(top_10_for_student_id[:10])
-    return  [careerList[i]for i in top_10_for_student_id[:10]], careerdes
+    # print(top_10_for_student_id[:10])
+    top = [careerList[i]for i in top_10_for_student_id[:10]]
+    return  [(index+1,careerList[i], career_dic['Description'][i]) for index, i in enumerate(top_10_for_student_id[:10])]
 
 
 
@@ -167,7 +168,7 @@ def career_person(student_id, personality_result):
     careerdes = [career_dic['Description'][i]for i in top_10_for_student_id[:10]]
     print(career_rankings)
     print(top_10_for_student_id[:10])
-    return  [careerList[i]for i in top_10_for_student_id[:10]], careerdes
+    return  [(careerList[i], career_dic['Description'][i]) for i in top_10_for_student_id[:10]]
 
 
 
