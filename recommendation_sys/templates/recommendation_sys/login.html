@@ -52,7 +52,7 @@
       <p class="m-0">Login to access your Luma Account </p>
     </div>
 
-    <form action="{% url 'login' %}" novalidate>
+    <form action="{% url 'login' %}" method="post" >
       {% csrf_token %}
       <div class="form-group">
         <label class="text-label" for="username">Username::</label>
@@ -78,7 +78,8 @@
         </div>
       </div>
       <div class="form-group">
-        <button class="btn btn-block btn-primary" type="submit">Login</button>
+        <!-- <button class="btn btn-block btn-primary" type="submit">Login</button> -->
+        <input type="submit" name="" value="Login">
     </form>
   </div>
 
