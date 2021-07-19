@@ -46,7 +46,8 @@ def studentdashboard(request):
     context = {
         'personality': personality,
         'student': stud,
-        'student_dashboard': 'active'
+        'student_dashboard': 'active',
+        'crumb': 'Student Dashboard',
     }
 
     return render(request, 'recommendation_sys/studentdashboard.html', context)
@@ -87,6 +88,7 @@ def rankings(request):
         # "careerdes_P": careerdes_P[:3],
         # "careerdes_KSP": careerdes_KSP[:3],
         'recomm_career': 'active',
+        'crumb': 'Recommend Career',
     }
     return render(request, "recommendation_sys/rankings.html", context)
 

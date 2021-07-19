@@ -231,7 +231,8 @@ def test(request):
     else:
         form = form_class()
 
-    context = {'form': form,  'data': data, 'profile_test': 'active'}
+    context = {'form': form,  'data': data,
+               'profile_test': 'active', 'crumb': 'Profile Test', }
 
     return render(request, "personality/test.html", context)
 
