@@ -14,13 +14,13 @@
 	<div class="course">
 		<div class="course-preview">
 			<h6 style="color: #ffffff;font-size: 1.3rem;">#{{index}}</h6>
-			<h2 style="color: #ffffff;">{{rank}}</h2>
+			<h2 class="text-name" style="color: #ffffff;">{{rank}}</h2>
 			
 		</div>
 		<div class="course-info">
 			
 			<h6>Description</h6>
-			<h2 class="rank-h2" style="
+			<h2  class="rank-h2 text" style="
     font-size: 1.2em;margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px;margin-inline-end: 0px;font-weight: bold;color: #000000;
 ">{{ des}}</h2>
 			<!--<button class="btn">Continue</button> -->
@@ -43,13 +43,13 @@
 	<div class="course">
 		<div class="course-preview">
 			<h6 style="color: #ffffff;font-size: 1.3rem;">#{{index}}</h6>
-			<h2 style="color: #ffffff;">{{rank}}</h2>
+			<h2 class="text-name" style="color: #ffffff;">{{rank}}</h2>
 			
 		</div>
 		<div class="course-info">
 			
 			<h6>Description</h6>
-			<h2 class="rank-h2" style="
+			<h2 class="rank-h2 text" style="
     font-size: 1.2em;margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px;margin-inline-end: 0px;font-weight: bold;color: #000000;
 ">{{ des}}</h2>
 			<!--<button class="btn">Continue</button> -->
@@ -74,13 +74,13 @@
 	<div class="course">
 		<div class="course-preview">
 			<h6 style="color: #ffffff;font-size: 1.3rem;">#{{index}}</h6>
-			<h2 style="color: #ffffff;">{{rank}}</h2>
+			<h2 class="text-name" style="color: #ffffff;">{{rank}}</h2>
 			
 		</div>
 		<div class="course-info">
 			
 			<h6>Description</h6>
-			<h2 class="rank-h2" style="
+			<h2 class="rank-h2 text" style="
     font-size: 1.2em;margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px;margin-inline-end: 0px;font-weight: bold;color: #000000;
 ">{{ des}}</h2>
 			<!--<button class="btn">Continue</button> -->
@@ -98,25 +98,6 @@
 	<a href="#">View all rankings by Academic and Personalities <i class="fas fa-chevron-right"></i></a>
 
 
-<div class="courses-container">
-	<div class="course">
-		<div class="course-preview">
-			<h6 style="color: #ffffff;font-size: 1.3rem;">#1</h6>
-			<h2 style="color: #ffffff;">Software Engineering</h2>
-			
-		</div>
-		<div class="course-info">
-			
-			<h6>Description</h6>
-			<h2 class="rank-h2" style="
-    font-size: 1.2em;margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px;margin-inline-end: 0px;font-weight: bold;color: #000000;
-">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos consectetur doloremque modi accusamus voluptates. Id fugiat aliquid cumque facilis veritatis, a, minima iure doloribus deserunt ea, aspernatur nulla quia laudantium.</h2>
-			<!--<button class="btn">Continue</button> -->
-		</div>
-		
-	</div>
-</div>
-<a href="#">View all chapters <i class="fas fa-chevron-right"></i></a>
 <!-- SOCIAL PANEL HTML -->
 <div class="social-panel-container">
 	<div class="social-panel">
@@ -154,6 +135,6 @@
 	</div>
 </div>
 
-
+<script src="{% static 'js/ranking.js' %}"></script>
 
 {% endblock %}

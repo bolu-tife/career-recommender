@@ -38,6 +38,7 @@ def logout(request):
 def studentdashboard(request):
     user = User.objects.get(username=request.user.get_username())
     stud = student.objects.get(Identification_no=user)
+    student_id = str(stud.id-1)
     personality = None
 
     if User_Personality.objects.filter(user_id=stud):
@@ -56,6 +57,7 @@ def rankings(request):
 
     u = User.objects.get(username=request.user.get_username())
     person = student.objects.get(Identification_no=u)
+    student_id = str(person.id-1)
     results = None
     record = [0.0 for i in range(6)]
 
@@ -69,7 +71,7 @@ def rankings(request):
         record[4] = results[0]['Enterprising']
         record[5] = results[0]['Conventional']
 
-        print()
+    student_id = str(person.id-1)
     # careerdes_KS, rankings_KS = career_acad('0')
     # careerdes_P,rankings_P = career_person('0', record)
     # careerdes_KSP,rankings_KSP = career_know_skill_personality('0', record)
@@ -79,9 +81,9 @@ def rankings(request):
     # careerdes_KSP,rankings_KSP = career_know_skill_personality('0', record)
     context = {
         
-        "rankings_P": career_person('0', record)[:2],
-        "rankings_KSP": career_know_skill_personality('0', record)[:2],
-        "rankings_KS": career_acad('0')[:2]
+        "rankings_P": career_person(student_id, record)[:2],
+        "rankings_KSP": career_know_skill_personality(student_id, record)[:2],
+        "rankings_KS": career_acad(student_id)[:2]
         # "careerdes_KS": careerdes_KS[:3],
         # "careerdes_P": careerdes_P[:3],
         # "careerdes_KSP": careerdes_KSP[:3],
@@ -95,6 +97,7 @@ def rankings_acad(request):
 
     u = User.objects.get(username=request.user.get_username())
     person = student.objects.get(Identification_no=u)
+    student_id = str(person.id-1)
     results = None
     record = [0.0 for i in range(6)]
 
@@ -111,7 +114,7 @@ def rankings_acad(request):
 
     context = {
 
-        "rankings_KS": career_acad('0')
+        "rankings_KS": career_acad(student_id)
        
     }
     return render(request, "recommendation_sys/rankings_acad.html", context)
@@ -121,6 +124,7 @@ def rankings_pers(request):
 
     u = User.objects.get(username=request.user.get_username())
     person = student.objects.get(Identification_no=u)
+    student_id = str(person.id-1)
     results = None
     record = [0.0 for i in range(6)]
 
@@ -137,7 +141,7 @@ def rankings_pers(request):
 
     context = {
 
-        "rankings_P": career_person('0', record),
+        "rankings_P": career_person(student_id, record),
         
        
     }
@@ -165,7 +169,7 @@ def rankings_both(request):
 
     context = {
 
-        "rankings_KSP": career_know_skill_personality('0', record),
+        "rankings_KSP": career_know_skill_personality(student_id, record),
 
     }
     return render(request, "recommendation_sys/rankings_both.html", context)

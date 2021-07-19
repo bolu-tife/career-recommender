@@ -82,8 +82,8 @@ def career_know_skill_personality(student_id,personality_result):
     top_10_for_student_id = sorted(range(len(career_rankings)), key=lambda k: career_rankings[k])
     top_10_for_student_id.reverse()
     careerdes = [career_dic['Description'][i]for i in top_10_for_student_id[:10]]
-    print(top_10_for_student_id)
-    print(career_rankings)
+    # print(top_10_for_student_id)
+    # print(career_rankings)
     return  [(index+1,careerList[i], career_dic['Description'][i]) for index, i in enumerate(top_10_for_student_id[:10])]
 
 
@@ -131,9 +131,9 @@ def career_acad(student_id):
     # next function to identify rankings or 
     top_10_for_student_id = sorted(range(len(career_rankings)), key=lambda k: career_rankings[k])
     top_10_for_student_id.reverse()
-    print(career_dic)
+    # print(career_dic)
     careerdes = [career_dic['Description'][i]for i in top_10_for_student_id[:10]]
-    print(career_rankings)
+    # print(career_rankings)
     # print(top_10_for_student_id[:10])
     top = [careerList[i]for i in top_10_for_student_id[:10]]
     return  [(index+1,careerList[i], career_dic['Description'][i]) for index, i in enumerate(top_10_for_student_id[:10])]
@@ -148,7 +148,7 @@ def career_person(student_id, personality_result):
     no_of_personality = len(personality_to_career.columns.tolist()) -1
     list_of_careers = know_skills_to_career['Title'].values.tolist()
     student_skills_set_average =[]
-    print(len(career_personality))
+    # print(len(career_personality))
     no_of_careers = len(list_of_careers)
     career_rankings = []
     for i in range(no_of_careers):
@@ -166,8 +166,8 @@ def career_person(student_id, personality_result):
     top_10_for_student_id = sorted(range(len(career_rankings)), key=lambda k: career_rankings[k])
     top_10_for_student_id.reverse()
     careerdes = [career_dic['Description'][i]for i in top_10_for_student_id[:10]]
-    print(career_rankings)
-    print(top_10_for_student_id[:10])
+    # print(career_rankings)
+    # print(top_10_for_student_id[:10])
     return  [(index+1,careerList[i], career_dic['Description'][i]) for index, i in enumerate(top_10_for_student_id[:10])]
 
 
