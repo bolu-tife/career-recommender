@@ -260,7 +260,9 @@ def result(request):
 
     context = {'student': student,
                'results': record,
-               'message': message}
+               'message': message,
+               'profile_test': 'active',
+               'crumb': 'Profile Test'}
     print(results, record, "uu")
 
     return render(request, 'personality/result.html', context)
