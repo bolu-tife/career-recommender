@@ -8,8 +8,6 @@ from django.contrib.auth.models import User
 import json
 
 
-
-
 a = """
 [
 
@@ -162,8 +160,6 @@ a = """
 """
 
 
-
-
 @login_required(login_url='login')
 def test(request):
     global a
@@ -183,33 +179,38 @@ def test(request):
             c = 0
 
             if form.is_valid():
-                
 
-                    # r = int(form.cleaned_data['Realistic1']) + int(form.cleaned_data['Realistic2']) + int(form.cleaned_data['Realistic3']) + int(form.cleaned_data['Realistic4']) + int(form.cleaned_data['Realistic5']) + int(form.cleaned_data['Realistic6']) + int(form.cleaned_data['Realistic7']) + int(form.cleaned_data['Realistic8']) + int(form.cleaned_data['Realistic9']) + int(form.cleaned_data['Realistic10'])
+                # r = int(form.cleaned_data['Realistic1']) + int(form.cleaned_data['Realistic2']) + int(form.cleaned_data['Realistic3']) + int(form.cleaned_data['Realistic4']) + int(form.cleaned_data['Realistic5']) + int(form.cleaned_data['Realistic6']) + int(form.cleaned_data['Realistic7']) + int(form.cleaned_data['Realistic8']) + int(form.cleaned_data['Realistic9']) + int(form.cleaned_data['Realistic10'])
 
-                    # i = int(form.cleaned_data['Investigative1']) + int(form.cleaned_data['Investigative2']) + int(form.cleaned_data['Investigative3'])+ int(form.cleaned_data['Investigative4']) + int(form.cleaned_data['Investigative5']) + int(form.cleaned_data['Investigative6']) + int(form.cleaned_data['Investigative10'])
+                # i = int(form.cleaned_data['Investigative1']) + int(form.cleaned_data['Investigative2']) + int(form.cleaned_data['Investigative3'])+ int(form.cleaned_data['Investigative4']) + int(form.cleaned_data['Investigative5']) + int(form.cleaned_data['Investigative6']) + int(form.cleaned_data['Investigative10'])
 
-                    # a = int(form.cleaned_data['Artistic1']) + int(form.cleaned_data['Artistic2']) + int(form.cleaned_data['Artistic3'])+ int(form.cleaned_data['Artistic4']) + int(form.cleaned_data['Artistic5']) + int(form.cleaned_data['Artistic6']) + int(form.cleaned_data['Artistic7']) + int(form.cleaned_data['Artistic8']) + int(form.cleaned_data['Artistic9']) + int(form.cleaned_data['Artistic10'])
+                # a = int(form.cleaned_data['Artistic1']) + int(form.cleaned_data['Artistic2']) + int(form.cleaned_data['Artistic3'])+ int(form.cleaned_data['Artistic4']) + int(form.cleaned_data['Artistic5']) + int(form.cleaned_data['Artistic6']) + int(form.cleaned_data['Artistic7']) + int(form.cleaned_data['Artistic8']) + int(form.cleaned_data['Artistic9']) + int(form.cleaned_data['Artistic10'])
 
-                    # s = int(form.cleaned_data['Social1']) + int(form.cleaned_data['Social2']) + int(form.cleaned_data['Social3'])+ int(form.cleaned_data['Social4']) + int(form.cleaned_data['Social5']) + int(form.cleaned_data['Social6']) +int(form.cleaned_data['Social7']) + int(form.cleaned_data['Social8']) + int(form.cleaned_data['Social9']) +int(form.cleaned_data['Social10'])
+                # s = int(form.cleaned_data['Social1']) + int(form.cleaned_data['Social2']) + int(form.cleaned_data['Social3'])+ int(form.cleaned_data['Social4']) + int(form.cleaned_data['Social5']) + int(form.cleaned_data['Social6']) +int(form.cleaned_data['Social7']) + int(form.cleaned_data['Social8']) + int(form.cleaned_data['Social9']) +int(form.cleaned_data['Social10'])
 
-                    # e = int(form.cleaned_data['Enterprising1']) + int(form.cleaned_data['Enterprising2']) + int(form.cleaned_data['Enterprising3'])+ int(form.cleaned_data['Enterprising4']) + int(form.cleaned_data['Enterprising5']) + int(form.cleaned_data['Enterprising6']) + int(form.cleaned_data['Enterprising7']) + int(form.cleaned_data['Enterprising8']) + int(form.cleaned_data['Enterprising9']) + int(form.cleaned_data['Enterprising10'])
+                # e = int(form.cleaned_data['Enterprising1']) + int(form.cleaned_data['Enterprising2']) + int(form.cleaned_data['Enterprising3'])+ int(form.cleaned_data['Enterprising4']) + int(form.cleaned_data['Enterprising5']) + int(form.cleaned_data['Enterprising6']) + int(form.cleaned_data['Enterprising7']) + int(form.cleaned_data['Enterprising8']) + int(form.cleaned_data['Enterprising9']) + int(form.cleaned_data['Enterprising10'])
 
-                    # c = int(form.cleaned_data['Conventional1']) + int(form.cleaned_data['Conventional2']) + int(form.cleaned_data['Conventional3'])+ int(form.cleaned_data['Conventional4']) + int(form.cleaned_data['Conventional5']) + int(form.cleaned_data['Conventional6']) + int(form.cleaned_data['Conventional7']) + int(form.cleaned_data['Conventional8']) + int(form.cleaned_data['Conventional9']) + int(form.cleaned_data['Conventional10'])
+                # c = int(form.cleaned_data['Conventional1']) + int(form.cleaned_data['Conventional2']) + int(form.cleaned_data['Conventional3'])+ int(form.cleaned_data['Conventional4']) + int(form.cleaned_data['Conventional5']) + int(form.cleaned_data['Conventional6']) + int(form.cleaned_data['Conventional7']) + int(form.cleaned_data['Conventional8']) + int(form.cleaned_data['Conventional9']) + int(form.cleaned_data['Conventional10'])
 
-                r = int(form.cleaned_data['Realistic1']) + int(form.cleaned_data['Realistic2'])
-                i = int(form.cleaned_data['Investigative1']) + int(form.cleaned_data['Investigative2'])
-                a = int(form.cleaned_data['Artistic1']) + int(form.cleaned_data['Artistic2'])
-                s = int(form.cleaned_data['Social1']) + int(form.cleaned_data['Social2'])
-                e = int(form.cleaned_data['Enterprising1']) + int(form.cleaned_data['Enterprising2'])
-                c = int(form.cleaned_data['Conventional1']) + int(form.cleaned_data['Conventional2'])
+                r = int(form.cleaned_data['Realistic1']) + \
+                    int(form.cleaned_data['Realistic2'])
+                i = int(form.cleaned_data['Investigative1']) + \
+                    int(form.cleaned_data['Investigative2'])
+                a = int(form.cleaned_data['Artistic1']) + \
+                    int(form.cleaned_data['Artistic2'])
+                s = int(form.cleaned_data['Social1']) + \
+                    int(form.cleaned_data['Social2'])
+                e = int(form.cleaned_data['Enterprising1']) + \
+                    int(form.cleaned_data['Enterprising2'])
+                c = int(form.cleaned_data['Conventional1']) + \
+                    int(form.cleaned_data['Conventional2'])
                 user = User.objects.get(username=request.user.get_username())
-                
 
                 try:
 
                     person = student.objects.get(Identification_no=user)
-                    user_pers, created = User_Personality.objects.update_or_create( user_id=person, defaults = {'Realistic':r/5, 'Investigative':i/5, 'Artistic':a/5, 'Social':s/5, 'Enterprising':e/5, 'Conventional':c/5,})
+                    user_pers, created = User_Personality.objects.update_or_create(user_id=person, defaults={
+                                                                                   'Realistic': r/5, 'Investigative': i/5, 'Artistic': a/5, 'Social': s/5, 'Enterprising': e/5, 'Conventional': c/5, })
                     print(user_pers)
 
                     # user_pers.Realistic = r/5
@@ -227,14 +228,12 @@ def test(request):
 
         return redirect('personality/test')
 
-
     else:
         form = form_class()
 
-    context = {'form': form,  'data': data}
+    context = {'form': form,  'data': data, 'profile_test': 'active'}
 
-    return render( request, "personality/test.html", context)
-
+    return render(request, "personality/test.html", context)
 
 
 @login_required(login_url='login')
@@ -246,7 +245,8 @@ def result(request):
     record = []
 
     if User_Personality.objects.filter(user_id=person):
-        results = list(User_Personality.objects.filter(user_id=person).values())
+        results = list(User_Personality.objects.filter(
+            user_id=person).values())
         record.append(results[0]['Realistic'])
         record.append(results[0]['Investigative'])
         record.append(results[0]['Artistic'])
@@ -254,15 +254,12 @@ def result(request):
         record.append(results[0]['Enterprising'])
         record.append(results[0]['Conventional'])
 
-       
-
     else:
         return redirect('personality/test')
 
-    context = {'student' : student,
-                'results': record,
-                'message': message}
+    context = {'student': student,
+               'results': record,
+               'message': message}
     print(results, record, "uu")
 
     return render(request, 'personality/result.html', context)
-
