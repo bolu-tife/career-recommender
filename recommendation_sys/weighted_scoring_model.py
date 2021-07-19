@@ -4,7 +4,7 @@
 import pandas as pd
 import math
 
-
+careers = pd.read_csv('data/data.csv')
 course_to_skill = pd.read_csv('data/courses_to_skills.csv')
 course_to_skills = pd.read_csv('data/courses_to_skills.csv')
 students_transcript = pd.read_csv('data/students_transcript.csv')
@@ -19,6 +19,9 @@ personality_to_career
 
 careerList = know_skills_to_career['Title'].values.tolist()
 
+careers.pop("Unnamed: 0")
+
+career_dic = careers.to_dict()
 
 grades_of_all_stud = [student_rec[1:] for student_rec in students_transcript.values.tolist()]
 courses_to_skills = [course_skill[1:] for course_skill in course_to_skills.values.tolist()]
@@ -78,9 +81,10 @@ def career_know_skill_personality(student_id,personality_result):
     # next function to identify rankings or
     top_10_for_student_id = sorted(range(len(career_rankings)), key=lambda k: career_rankings[k])
     top_10_for_student_id.reverse()
+    careerdes = [career_dic['Description'][i]for i in top_10_for_student_id[:10]]
     print(top_10_for_student_id)
     print(career_rankings)
-    return [careerList[i]for i in top_10_for_student_id[:10]]
+    return  [(index+1,careerList[i], career_dic['Description'][i]) for index, i in enumerate(top_10_for_student_id[:10])]
 
 
 
@@ -127,9 +131,12 @@ def career_acad(student_id):
     # next function to identify rankings or 
     top_10_for_student_id = sorted(range(len(career_rankings)), key=lambda k: career_rankings[k])
     top_10_for_student_id.reverse()
+    print(career_dic)
+    careerdes = [career_dic['Description'][i]for i in top_10_for_student_id[:10]]
     print(career_rankings)
-    print(top_10_for_student_id[:10])
-    return  [careerList[i]for i in top_10_for_student_id[:10]]
+    # print(top_10_for_student_id[:10])
+    top = [careerList[i]for i in top_10_for_student_id[:10]]
+    return  [(index+1,careerList[i], career_dic['Description'][i]) for index, i in enumerate(top_10_for_student_id[:10])]
 
 
 
@@ -158,9 +165,10 @@ def career_person(student_id, personality_result):
     # next function to identify rankings or
     top_10_for_student_id = sorted(range(len(career_rankings)), key=lambda k: career_rankings[k])
     top_10_for_student_id.reverse()
+    careerdes = [career_dic['Description'][i]for i in top_10_for_student_id[:10]]
     print(career_rankings)
     print(top_10_for_student_id[:10])
-    return  [careerList[i]for i in top_10_for_student_id[:10]]
+    return  [(index+1,careerList[i], career_dic['Description'][i]) for index, i in enumerate(top_10_for_student_id[:10])]
 
 
 

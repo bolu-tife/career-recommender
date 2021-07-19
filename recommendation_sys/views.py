@@ -56,7 +56,6 @@ def rankings(request):
 
     u = User.objects.get(username=request.user.get_username())
     person = student.objects.get(Identification_no=u)
-    message = ''
     results = None
     record = [0.0 for i in range(6)]
 
@@ -70,13 +69,103 @@ def rankings(request):
         record[4] = results[0]['Enterprising']
         record[5] = results[0]['Conventional']
 
-    print(career_acad('0'))
-    rankings_KS = career_acad('0')
-    rankings_P = career_person('0', record)
-    rankings_KSP = career_know_skill_personality('0', record)
+        print()
+    # careerdes_KS, rankings_KS = career_acad('0')
+    # careerdes_P,rankings_P = career_person('0', record)
+    # careerdes_KSP,rankings_KSP = career_know_skill_personality('0', record)
+
+    # careerdes_KS, rankings_KS = career_acad('0')
+    # careerdes_P,rankings_P = career_person('0', record)
+    # careerdes_KSP,rankings_KSP = career_know_skill_personality('0', record)
     context = {
-        "rankings_KS": rankings_KS,
-        "rankings_P": rankings_P,
-        "rankings_KSP": rankings_KSP,
+        
+        "rankings_P": career_person('0', record)[:2],
+        "rankings_KSP": career_know_skill_personality('0', record)[:2],
+        "rankings_KS": career_acad('0')[:2]
+        # "careerdes_KS": careerdes_KS[:3],
+        # "careerdes_P": careerdes_P[:3],
+        # "careerdes_KSP": careerdes_KSP[:3],
     }
     return render(request, "recommendation_sys/rankings.html", context)
+
+
+
+@login_required(login_url='login')
+def rankings_acad(request):
+
+    u = User.objects.get(username=request.user.get_username())
+    person = student.objects.get(Identification_no=u)
+    results = None
+    record = [0.0 for i in range(6)]
+
+    if User_Personality.objects.filter(user_id=person):
+        results = list(User_Personality.objects.filter(
+            user_id=person).values())
+        record[0] = results[0]['Realistic']
+        record[1] = results[0]['Investigative']
+        record[2] = results[0]['Artistic']
+        record[3] = results[0]['Social']
+        record[4] = results[0]['Enterprising']
+        record[5] = results[0]['Conventional']
+
+
+    context = {
+
+        "rankings_KS": career_acad('0')
+       
+    }
+    return render(request, "recommendation_sys/rankings_acad.html", context)
+
+@login_required(login_url='login')
+def rankings_pers(request):
+
+    u = User.objects.get(username=request.user.get_username())
+    person = student.objects.get(Identification_no=u)
+    results = None
+    record = [0.0 for i in range(6)]
+
+    if User_Personality.objects.filter(user_id=person):
+        results = list(User_Personality.objects.filter(
+            user_id=person).values())
+        record[0] = results[0]['Realistic']
+        record[1] = results[0]['Investigative']
+        record[2] = results[0]['Artistic']
+        record[3] = results[0]['Social']
+        record[4] = results[0]['Enterprising']
+        record[5] = results[0]['Conventional']
+
+
+    context = {
+
+        "rankings_P": career_person('0', record),
+        
+       
+    }
+    return render(request, "recommendation_sys/rankings_pers.html", context)
+
+
+@login_required(login_url='login')
+def rankings_both(request):
+
+    u = User.objects.get(username=request.user.get_username())
+    person = student.objects.get(Identification_no=u)
+    results = None
+    record = [0.0 for i in range(6)]
+
+    if User_Personality.objects.filter(user_id=person):
+        results = list(User_Personality.objects.filter(
+            user_id=person).values())
+        record[0] = results[0]['Realistic']
+        record[1] = results[0]['Investigative']
+        record[2] = results[0]['Artistic']
+        record[3] = results[0]['Social']
+        record[4] = results[0]['Enterprising']
+        record[5] = results[0]['Conventional']
+
+
+    context = {
+
+        "rankings_KSP": career_know_skill_personality('0', record),
+
+    }
+    return render(request, "recommendation_sys/rankings_both.html", context)
