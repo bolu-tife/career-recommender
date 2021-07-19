@@ -1,11 +1,14 @@
 {% extends "personality/base.html" %}
 
 {% block body_block %}
-<div class="card card-body mb-32pt">
-  <form role="form" method="POST" action="{% url 'personality:test' %}" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{form}}
-    <button type="submit" class="btn btn-primary">{{ "Add" }}</button>
-  </form>
+<div class="container page__container page-section">
+  <div class="card card-body mb-32pt">
+    <form role="form" method="POST" action="{% url 'personality:test' %}" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{form}}
+      <button type="submit" class="btn btn-primary">{{ "Add" }}</button>
+    </form>
+  </div>
 </div>
+
 {% endblock body_block %}
