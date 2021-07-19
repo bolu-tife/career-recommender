@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title></title>
+</head>
+
+<body>
+    {{ area }}
+    <div class= "content">
+    <div class="container">
+
+    <div class="form">
+        <label id="question" ></label>
+        <input type="text" id="guess" name="word" class="text-box"><br>
+
+        <input type="radio" name="answer" value="1"> Strongly Dislike 
+        <input type="radio" name="answer" value="2"> Like
+
+            <div class="button-block">
+
+        <button class="button" id="check">Check</button>
+        <button class="button" id="getWord">GetWord</button>
+        </div>
+    </div>
+    </div>
+    <a href="{%url 'logout' %}"><button class="logout">logout</button></a>
+</div>
+
+<div id='token' style="visibility:hidden">{%csrf_token%}</div>
+<script>
+
+// $("input:radio[name=answer]").click(function() {
+//         var value = $(this).val();
+        
+        
+//     });
+ var callWord = (randomVar) => {
+
+            if (count <= total) {
+                
+                var input = document.getElementById('guess').value;
+                
+            } else {
+                
+                
+                document.getElementById('guess').style.display = "none";
+                
+                getWordButton.disabled = true;
+                checkButton.disabled = true;
+                
+            }
+
+        }
+
+
+
+
+        const wordList = {{ data | safe }}
+        
+        const level1 =  {{ area|safe }};
+        console.log(level1)
+        console.log(wordList)
+
+       
+        const difficultWords = [];
+        var checkButton = document.getElementById("check");
+        var getWordButton = document.getElementById("getWord");
+        var accuracyValue = document.getElementById("accuracyValue");
+        var input = document.getElementById('guess').value.toLowerCase();
+        var randomVar =0;
+        var count = 0;
+        // var total = wordLimit; 
+        var count = 0;
+        var total = 0
+        var sum = 0;
+        var rscore = 0;
+        var score = 0;
+        var accuracy = 0;
+        var totalAccuracy = accuracy + "%";
+        var Realistic = 0;
+        var Investigative = 0;
+        var Artistic = 0;
+        var Social = 0;
+        var Enterprising = 0;
+        var Conventional = 0
+
+        getWordButton.disabled = false;
+        checkButton.disabled = false;
+        document.getElementById("question").innerHTML = wordList[randomVar]
+
+        
+        var callWord = (randomVar) => {
+
+            if (count <= 1) {
+
+
+                document.getElementById("question").innerHTML = wordList[randomVar]
+                var input = document.getElementById('guess').value;
+
+            } else {
+
+                document.getElementById('question').style.display = "none";
+                document.getElementById('guess').style.display = "none";
+                getWordButton.style.display = "none";
+                checkButton.style.display = "none";
+                
+                getWordButton.disabled = true;
+                checkButton.disabled = true;
+
+                let form = new FormData()
+                form.append('Realistic', Realistic)
+                form.append('Investigative', Investigative)
+                form.append('Artistic', Artistic)
+                form.append('Social', Social)
+                form.append('Enterprising', Enterprising)
+                form.append('Conventional', Conventional)
+                
+                form.append('csrfmiddlewaretoken', '{{csrf_token}}')
+
+                fetch('save/', {
+                    method: 'POST',
+                    body: form,
+                }).then(res => { res.json() }).then(data => console.log(data));
+
+                }
+
+        }
+
+        var validateInput = (randomVar) => {
+            // var input = document.getElementById('guess').value.toLowerCase();
+            // console($('input[name="answer"]:checked').val())
+            var input = 1
+            console.log(input)
+            // console.log(randomVar + "from check button")
+            if ('Realistic' === level1[randomVar]) {
+
+                Realistic+=input;
+            }
+            else if('Investigative' === level1[randomVar]) {
+
+                Investigative+=input;
+            }
+            else if('Artistic' === level1[randomVar]) {
+
+                Artistic+=input;
+            }
+            else if('Social' === level1[randomVar]) {
+
+                Social+=input;
+            }
+            else if('Enterprising' === level1[randomVar]) {
+
+                Enterprising+=input;
+            }
+            else {
+
+                Conventional+=input;
+            }
+            
+            console.log(Investigative);
+
+
+
+        }
+        // var speech = new SpeechSynthesisUtterance();
+
+        checkButton.addEventListener("click", function () {
+            
+            // document.getElementById('answer').value = '';
+        })
+
+        getWordButton.addEventListener("click", () => {
+            validateInput(randomVar);
+            // randomVar = Math.floor(Math.random() * level1.length);
+            randomVar += 1
+            count++;
+            callWord(randomVar);
+        })
+
+        
+        
+
+        
+
+    
+</script>
+
+</body>
+
+</html>

@@ -1,12 +1,12 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .forms import get_form
-from .models import User_Personality
+from .models import User_Personality, Questions
 from account.models import student
 from django.contrib.auth.models import User
 # from django.contrib import messages
 import json
-
+from django.http.response import JsonResponse
 
 a = """
 [
@@ -266,3 +266,59 @@ def result(request):
     print(results, record, "uu")
 
     return render(request, 'personality/result.html', context)
+
+
+def fisa(request):
+    try:
+        # child_user = Child.objects.get(user=request.user)
+
+        quiz_words = Questions.objects.all()
+        area_list = []
+
+        wordList = []
+        for items in quiz_words:
+            wordList.append(str(items))
+
+        for items in quiz_words:
+
+            area_list.append(str(items.area))
+
+
+        context = {
+            # 'newuser': child_user,
+            'word': quiz_words,
+            'data': wordList,
+            'area': area_list,
+            # 'wordlimit': wordlimit,
+        }
+        return render(request, 'personality/fisa.html', context)
+    except:
+  
+        return render(request, 'personality/fisa.html', {})
+
+def save(request):
+    if request.method == 'POST':
+        u = User.objects.get(username=request.user.get_username())
+        person = student.objects.get(Identification_no=u)
+        Realistic = request.POST.get('Realistic')
+        Investigative = request.POST.get('Investigative')
+        Artistic = request.POST.get('Artistic')
+        Social = request.POST.get('Social')
+        Enterprising = request.POST.get('Enterprising')
+        Conventional = request.POST.get('Conventional')
+
+        print(person)
+        try:
+
+            person = student.objects.get(Identification_no=user)
+            user_pers, created = User_Personality.objects.update_or_create(user_id=person, defaults={
+                                                                           'Realistic': Realistic/5, 'Investigative': Investigative/5, 'Artistic': Artistic/5, 'Social': Social/5, 'Enterprising': Enterprising/5, 'Conventional': Conventional/5, })
+            print(user_pers)
+
+            return render(request, 'personality/test.html')
+            # return JsonResponse({'status': 'success'})
+
+        except:
+            print(request)
+            return render(request, 'personality/test.html')
+    return render(request, 'personality/test.html')
