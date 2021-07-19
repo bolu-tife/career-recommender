@@ -2,135 +2,96 @@
 {% load static %}
 
 {% block body_block %}
-<!-- <head> -->
+<head>
     <!-- Required meta tags -->
-    <!-- <meta charset="utf-8"> -->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- semantic UI -->
-    <!-- <link rel="stylesheet" type='text/css'
-        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css"> -->
-    <!--Chart js-->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
-        integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script> -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"
-        integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" type='text/css'
+        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
+    <!-- Chart js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+        integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"
+        integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
     <!-- jQuery -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
-<!-- </head> -->
-<!-- 
-{% if user.is_authenticated %}
-<a href="{% url 'personality:test' %}">Retake Test</a>
-{% endif %}
-
-<canvas id="myChart" width="400" height="200"></canvas>
-<canvas id="doughnut" width="400" height="200"></canvas> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
 
 
+<div class="page-section border-bottom-2">
+    <div class="container page__container">
+        <div class="row align-items-start">
+            <div class="col-md-8">
 
-<!-- ChartJS -->
-<!-- <script src="{% static 'personality/chart.js/Chart.min.js' %}"></script>
-<script>
-    $(document).ready(function () {
-
-
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var dough = document.getElementById('doughnut').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Realistic', 'Investigative', 'Artistic', 'Social', 'Enterprising', 'Conventional'],
-                datasets: [{
-                    label: 'Interest Profile',
-                    data: {{ results }},
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-                },
-        options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            },
-            maintainAspectRatio: false,
-            responsive: true,
-        }
-    }
-    });
-
-    var myChart = new Chart(dough, {
-        type: 'doughnut',
-        data: {
-            labels: ['Realistic', 'Investigative', 'Artistic', 'Social', 'Enterprising', 'Conventional'],
-            datasets: [{
-                label: '# of Votes',
-                data: {{ results }},
-        backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)'
-        ],
-        borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
-        ],
-        borderWidth: 1
-    }]
-            },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            },
-            maintainAspectRatio: false,
-                responsive : true,
-                }
-    }
-        });
-    });
-</script> -->
-
-<div class="container page__container page-section">
-    <div class="card card-body mb-32pt">
-        <div id="legend" class="chart-legend mt-0 mb-24pt justify-content-start"><span class="chart-legend-item"><i
-                    class="chart-legend-indicator" style="background-color: #2196F3"></i>Previous Week</span><span
-                class="chart-legend-item"><i class="chart-legend-indicator" style="background-color: #2196F3"></i>Last
-                Week</span></div>
-        <div class="chart" style="height: 320px;">
-            <div class="chartjs-size-monitor">
-                <div class="chartjs-size-monitor-expand">
-                    <div class=""></div>
+                <div class="page-separator">
+                    <div class="page-separator__text">Result</div>
                 </div>
-                <div class="chartjs-size-monitor-shrink">
-                    <div class=""></div>
-                </div>
+                <ul class="list-group stack mb-40pt">
+                    <li class="list-group-item d-flex">
+                        <canvas id="myChart" width="400" height="250"></canvas>
+                    </li>
+
+                </ul>
+
             </div>
-            <canvas id="earningsChart" class="chart-canvas js-update-chart-bar chartjs-render-monitor"
-                data-chart-legend="#legend" data-chart-line-background-color="gradient:primary,gray" data-chart-prefix="$"
-                data-chart-suffix="k" style="display: block; height: 320px; width: 753px;" width="941"
-                height="400"></canvas>
+            <div class="col-md-4">
+
+                <div class="page-separator">
+                    <div class="page-separator__text">Test</div>
+                </div>
+                <div class="card">
+                    <div class="card-body text-center">
+                        <a href="{% url 'personality:test' %}" class="btn btn-accent">Retake</a>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </div>
+
+<!-- ChartJS -->
+<script src="{% static 'personality/chart.js/Chart.min.js' %}"></script>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Realistic', 'Investigative', 'Artistic', 'Social', 'Enterprising', 'Conventional'],
+            datasets: [{
+                label: 'Interest Profile - Result',
+                // data: [12, 19, 3, 5, 2, 3],
+                data: {{ results }},
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                },
+                maintainAspectRatio: false,
+                responsive: true,
+            }
+        }
+    });
+</script>
+
 {% endblock body_block %}
