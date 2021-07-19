@@ -73,34 +73,6 @@
 				<span class="d-none d-lg-block">Luma</span>
 			</a>
 
-			<span class="d-none d-md-flex align-items-center mr-16pt">
-
-				<span class="avatar avatar-sm mr-12pt">
-
-					<span class="avatar-title rounded navbar-avatar"><i
-							class="material-icons">trending_up</i></span>
-
-				</span>
-
-				<small class="flex d-flex flex-column">
-					<strong class="navbar-text-100">Earnings</strong>
-					<span class="navbar-text-50">&dollar;12.3k</span>
-				</small>
-			</span>
-			<span class="d-none d-md-flex align-items-center mr-16pt">
-
-				<span class="avatar avatar-sm mr-12pt">
-
-					<span class="avatar-title rounded navbar-avatar"><i class="material-icons">receipt</i></span>
-
-				</span>
-
-				<small class="flex d-flex flex-column">
-					<strong class="navbar-text-100">Sales</strong>
-					<span class="navbar-text-50">264</span>
-				</small>
-			</span>
-
 			<div class="flex"></div>
 
 
@@ -305,7 +277,7 @@
 
 				<div class="row" role="tablist">
 					<div class="col-auto">
-						<a href="instructor-earnings.html" class="btn btn-outline-secondary">Earnings</a>
+						<a href="#" onclick="history.back()" class="btn btn-outline-secondary">Go back</a>
 					</div>
 				</div>
 
@@ -378,20 +350,20 @@
 				<ul class="sidebar-menu">
 
 
-					<li class="sidebar-menu-item active">
+					<li class="sidebar-menu-item {{student_dashboard}}">
 						<a class="sidebar-menu-button" href="instructor-dashboard.html">
 							<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">school</span>
 							<span class="sidebar-menu-text">Student Dashboard</span>
 						</a>
 					</li>
-					<li class="sidebar-menu-item">
+					<li class="sidebar-menu-item {{profile_test}}">
 						<a class="sidebar-menu-button" href="{% url 'personality:test' %}">
 							<span
 								class="material-icons sidebar-menu-icon sidebar-menu-icon--left">import_contacts</span>
 							<span class="sidebar-menu-text">Take Interest Profile Test</span>
 						</a>
 					</li>
-					<li class="sidebar-menu-item">
+					<li class="sidebar-menu-item {{recomm_career}}">
 						<a class="sidebar-menu-button" href="{% url 'rankings' %}">
 							<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">help</span>
 							<span class="sidebar-menu-text">Recommend Career</span>

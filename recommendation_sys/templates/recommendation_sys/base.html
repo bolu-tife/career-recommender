@@ -17,22 +17,22 @@
 	<!-- Perfect Scrollbar -->
 	<!-- Perfect Scrollbar -->
 	<link type="text/css" href="{% static 'css/perfect-scrollbar.css' %}" rel="stylesheet">
-	
+
 	<!-- Fix Footer CSS -->
 	<link type="text/css" href="{% static 'css/fix-footer.css' %}" rel="stylesheet">
-	
+
 	<!-- Material Design Icons -->
 	<link type="text/css" href="{% static 'css/material-icons.css' %}" rel="stylesheet">
-	
-	
+
+
 	<!-- Font Awesome Icons -->
 	<link type="text/css" href="{% static 'css/fontawesome.css' %}" rel="stylesheet">
-	
-	
+
+
 	<!-- Preloader -->
 	<link type="text/css" href="{% static 'css/preloader.css' %}" rel="stylesheet">
-	
-	
+
+
 	<!-- App CSS -->
 	<link type="text/css" href="{% static 'css/app.css' %}" rel="stylesheet">
 
@@ -40,6 +40,7 @@
 	<link type="text/css" href="{% static 'css/ranking.css' %}" rel="stylesheet">
 
 </head>
+
 <body class="layout-app ">
 
 	<div class="preloader">
@@ -48,411 +49,388 @@
 			<div class="sk-child sk-double-bounce2"></div>
 		</div>
 	</div>
-</div>
-
-<div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
-	<div class="mdk-drawer-layout__content page-content">
-
-		<!-- Header -->
-
-		<div class="navbar navbar-expand pr-0 navbar-light border-bottom-2" id="default-navbar" data-primary>
-			<!-- Navbar toggler -->
-			<button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button"
-				data-toggle="sidebar">
-				<span class="material-icons">short_text</span>
-			</button>
-
-			<!-- Navbar Brand -->
-			<a href="index.html" class="navbar-brand mr-16pt d-lg-none">
-
-				<span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
-
-					<span class="avatar-title rounded bg-primary"><img
-							src="assets/images/illustration/student/128/white.svg" alt="logo"
-							class="img-fluid" /></span>
-
-				</span>
-
-				<span class="d-none d-lg-block">Luma</span>
-			</a>
-
-			<span class="d-none d-md-flex align-items-center mr-16pt">
-
-				<span class="avatar avatar-sm mr-12pt">
-
-					<span class="avatar-title rounded navbar-avatar"><i
-							class="material-icons">trending_up</i></span>
-
-				</span>
-
-				<small class="flex d-flex flex-column">
-					<strong class="navbar-text-100">Earnings</strong>
-					<span class="navbar-text-50">&dollar;12.3k</span>
-				</small>
-			</span>
-			<span class="d-none d-md-flex align-items-center mr-16pt">
-
-				<span class="avatar avatar-sm mr-12pt">
-
-					<span class="avatar-title rounded navbar-avatar"><i class="material-icons">receipt</i></span>
-
-				</span>
-
-				<small class="flex d-flex flex-column">
-					<strong class="navbar-text-100">Sales</strong>
-					<span class="navbar-text-50">264</span>
-				</small>
-			</span>
-
-			<div class="flex"></div>
-
-
-			<!-- Toggler -->
-			<a href="compact-instructor-dashboard.html"
-				class="navbar-toggler navbar-toggler-custom align-items-center justify-content-center d-none d-lg-flex"
-				data-toggle="tooltip" data-title="Switch to Compact Layout" data-placement="bottom"
-				data-boundary="window">
-				<span class="material-icons">swap_horiz</span>
-			</a>
-
-
-			<div class="nav navbar-nav flex-nowrap d-flex mr-16pt">
-
-
-				<!-- Notifications dropdown -->
-				<div class="nav-item dropdown dropdown-notifications dropdown-xs-down-full" data-toggle="tooltip"
-					data-title="Messages" data-placement="bottom" data-boundary="window">
-					<button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown"
-						data-caret="false">
-						<i class="material-icons icon-24pt">mail_outline</i>
-					</button>
-					<div class="dropdown-menu dropdown-menu-right">
-						<div data-perfect-scrollbar class="position-relative">
-							<div class="dropdown-header"><strong>Messages</strong></div>
-							<div class="list-group list-group-flush mb-0">
-
-								<a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
-									<span class="d-flex align-items-center mb-1">
-										<small class="text-black-50">5 minutes ago</small>
-
-										<span class="ml-auto unread-indicator bg-accent"></span>
-
-									</span>
-									<span class="d-flex">
-										<span class="avatar avatar-xs mr-2">
-											<img src="assets/images/people/110/woman-5.jpg" alt="people"
-												class="avatar-img rounded-circle">
-										</span>
-										<span class="flex d-flex flex-column">
-											<strong class="text-black-100">Michelle</strong>
-											<span class="text-black-70">Clients loved the new design.</span>
-										</span>
-									</span>
-								</a>
-
-								<a href="javascript:void(0);" class="list-group-item list-group-item-action">
-									<span class="d-flex align-items-center mb-1">
-										<small class="text-black-50">5 minutes ago</small>
-
-									</span>
-									<span class="d-flex">
-										<span class="avatar avatar-xs mr-2">
-											<img src="assets/images/people/110/woman-5.jpg" alt="people"
-												class="avatar-img rounded-circle">
-										</span>
-										<span class="flex d-flex flex-column">
-											<strong class="text-black-100">Michelle</strong>
-											<span class="text-black-70">🔥 Superb job..</span>
-										</span>
-									</span>
-								</a>
-
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- // END Notifications dropdown -->
-
-
-				<!-- Notifications dropdown -->
-				<div class="nav-item ml-16pt dropdown dropdown-notifications dropdown-xs-down-full"
-					data-toggle="tooltip" data-title="Notifications" data-placement="bottom" data-boundary="window">
-					<button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown"
-						data-caret="false">
-						<i class="material-icons">notifications_none</i>
-						<span class="badge badge-notifications badge-accent">2</span>
-					</button>
-					<div class="dropdown-menu dropdown-menu-right">
-						<div data-perfect-scrollbar class="position-relative">
-							<div class="dropdown-header"><strong>System notifications</strong></div>
-							<div class="list-group list-group-flush mb-0">
-
-								<a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
-									<span class="d-flex align-items-center mb-1">
-										<small class="text-black-50">3 minutes ago</small>
-
-										<span class="ml-auto unread-indicator bg-accent"></span>
-
-									</span>
-									<span class="d-flex">
-										<span class="avatar avatar-xs mr-2">
-											<span class="avatar-title rounded-circle bg-light">
-												<i
-													class="material-icons font-size-16pt text-accent">account_circle</i>
-											</span>
-										</span>
-										<span class="flex d-flex flex-column">
-
-											<span class="text-black-70">Your profile information has not been synced
-												correctly.</span>
-										</span>
-									</span>
-								</a>
-
-								<a href="javascript:void(0);" class="list-group-item list-group-item-action">
-									<span class="d-flex align-items-center mb-1">
-										<small class="text-black-50">5 hours ago</small>
-
-									</span>
-									<span class="d-flex">
-										<span class="avatar avatar-xs mr-2">
-											<span class="avatar-title rounded-circle bg-light">
-												<i class="material-icons font-size-16pt text-primary">group_add</i>
-											</span>
-										</span>
-										<span class="flex d-flex flex-column">
-											<strong class="text-black-100">Adrian. D</strong>
-											<span class="text-black-70">Wants to join your private group.</span>
-										</span>
-									</span>
-								</a>
-
-								<a href="javascript:void(0);" class="list-group-item list-group-item-action">
-									<span class="d-flex align-items-center mb-1">
-										<small class="text-black-50">1 day ago</small>
-
-									</span>
-									<span class="d-flex">
-										<span class="avatar avatar-xs mr-2">
-											<span class="avatar-title rounded-circle bg-light">
-												<i class="material-icons font-size-16pt text-warning">storage</i>
-											</span>
-										</span>
-										<span class="flex d-flex flex-column">
-
-											<span class="text-black-70">Your deploy was successful.</span>
-										</span>
-									</span>
-								</a>
-
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- // END Notifications dropdown -->
-
-
-				<div class="nav-item dropdown">
-					<a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown"
-						data-caret="false">
-
-						<span class="avatar avatar-sm mr-8pt2">
-
-							<span class="avatar-title rounded-circle bg-primary"><i
-									class="material-icons">account_box</i></span>
-
-						</span>
-
-					</a>
-					<div class="dropdown-menu dropdown-menu-right">
-						<div class="dropdown-header"><strong>Account</strong></div>
-						<a class="dropdown-item" href="edit-account.html">Edit Account</a>
-						<a class="dropdown-item" href="billing.html">Billing</a>
-						<a class="dropdown-item" href="billing-history.html">Payments</a>
-						{% if user.is_authenticated %}
-						<a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
-						{% else %}
-						<a class="dropdown-item" href="{% url 'login' %}">Login</a>
-						{% endif %}
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- // END Header -->
-
-
-
-		<div class="pt-32pt">
-			<div
-				class="container page__container d-flex flex-column flex-md-row align-items-center text-center text-sm-left">
-				<div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
-
-					<div class="mb-24pt mb-sm-0 mr-sm-24pt">
-						<h2 class="mb-0">Dashboard</h2>
-
-						<ol class="breadcrumb p-0 m-0">
-							<li class="breadcrumb-item"><a href="{% url 'studentdashboard' %}">Home</a></li>
-
-							<li class="breadcrumb-item active">
-
-								Dashboard
-
-							</li>
-
-						</ol>
-
-					</div>
-				</div>
-
-
-				<div class="row" role="tablist">
-					<div class="col-auto">
-						<a href="instructor-earnings.html" class="btn btn-outline-secondary">Earnings</a>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-		{% block body_block %}
-
-
-		{% endblock %}
-
-		<div class="js-fix-footer2 bg-white border-top-2">
-			<div class="container page__container page-section d-flex flex-column">
-				<p class="text-70 brand mb-24pt">
-					<img class="brand-icon" src="assets/images/logo/black-70@2x.png" width="30" alt="Luma"> Luma
-				</p>
-				<p class="measure-lead-max text-50 small mr-8pt">Luma is a beautifully crafted user interface for
-					modern Education Platforms, including Courses & Tutorials, Video Lessons, Student and Teacher
-					Dashboard, Curriculum Management, Earnings and Reporting, ERP, HR, CMS, Tasks, Projects,
-					eCommerce and more.</p>
-				<p class="mb-8pt d-flex">
-					<a href="" class="text-70 text-underline mr-8pt small">Terms</a>
-					<a href="" class="text-70 text-underline small">Privacy policy</a>
-				</p>
-				<p class="text-50 small mt-n1 mb-0">Copyright 2019 &copy; All rights reserved.</p>
-			</div>
-		</div>
-
-
 	</div>
-	<!-- // END drawer-layout__content -->
 
+	<div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+		<div class="mdk-drawer-layout__content page-content">
 
+			<!-- Header -->
 
+			<div class="navbar navbar-expand pr-0 navbar-light border-bottom-2" id="default-navbar" data-primary>
+				<!-- Navbar toggler -->
+				<button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button"
+					data-toggle="sidebar">
+					<span class="material-icons">short_text</span>
+				</button>
 
-	<!-- drawer -->
-	<div class="mdk-drawer js-mdk-drawer" id="default-drawer">
-		<div class="mdk-drawer__content">
-			<div class="sidebar sidebar-dark-dodger-blue sidebar-left" data-perfect-scrollbar>
+				<!-- Navbar Brand -->
+				<a href="index.html" class="navbar-brand mr-16pt d-lg-none">
 
-
-				<div class="d-flex align-items-center navbar-height">
-					<form action="index.html" class="search-form search-form--black mx-16pt pr-0 pl-16pt">
-						<input type="text" class="form-control pl-0" placeholder="Search">
-						<button class="btn" type="submit"><i class="material-icons">search</i></button>
-					</form>
-				</div>
-
-
-
-				<a href="index.html" class="sidebar-brand ">
-					<!-- <img class="sidebar-brand-icon" src="assets/images/illustration/teacher/128/white.svg" alt="Luma"> -->
-
-					<span class="avatar avatar-xl sidebar-brand-icon h-auto">
+					<span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
 
 						<span class="avatar-title rounded bg-primary"><img
-								src="assets/images/illustration/teacher/128/white.svg" class="img-fluid"
-								alt="logo" /></span>
+								src="assets/images/illustration/student/128/white.svg" alt="logo"
+								class="img-fluid" /></span>
 
 					</span>
 
-					<span>Luma</span>
+					<span class="d-none d-lg-block">Luma</span>
+				</a>
+
+				<div class="flex"></div>
+
+
+				<!-- Toggler -->
+				<a href="compact-instructor-dashboard.html"
+					class="navbar-toggler navbar-toggler-custom align-items-center justify-content-center d-none d-lg-flex"
+					data-toggle="tooltip" data-title="Switch to Compact Layout" data-placement="bottom"
+					data-boundary="window">
+					<span class="material-icons">swap_horiz</span>
 				</a>
 
 
+				<div class="nav navbar-nav flex-nowrap d-flex mr-16pt">
 
 
+					<!-- Notifications dropdown -->
+					<div class="nav-item dropdown dropdown-notifications dropdown-xs-down-full" data-toggle="tooltip"
+						data-title="Messages" data-placement="bottom" data-boundary="window">
+						<button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown"
+							data-caret="false">
+							<i class="material-icons icon-24pt">mail_outline</i>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div data-perfect-scrollbar class="position-relative">
+								<div class="dropdown-header"><strong>Messages</strong></div>
+								<div class="list-group list-group-flush mb-0">
 
-				<div class="sidebar-heading">Student</div>
-				<ul class="sidebar-menu">
+									<a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+										<span class="d-flex align-items-center mb-1">
+											<small class="text-black-50">5 minutes ago</small>
+
+											<span class="ml-auto unread-indicator bg-accent"></span>
+
+										</span>
+										<span class="d-flex">
+											<span class="avatar avatar-xs mr-2">
+												<img src="assets/images/people/110/woman-5.jpg" alt="people"
+													class="avatar-img rounded-circle">
+											</span>
+											<span class="flex d-flex flex-column">
+												<strong class="text-black-100">Michelle</strong>
+												<span class="text-black-70">Clients loved the new design.</span>
+											</span>
+										</span>
+									</a>
+
+									<a href="javascript:void(0);" class="list-group-item list-group-item-action">
+										<span class="d-flex align-items-center mb-1">
+											<small class="text-black-50">5 minutes ago</small>
+
+										</span>
+										<span class="d-flex">
+											<span class="avatar avatar-xs mr-2">
+												<img src="assets/images/people/110/woman-5.jpg" alt="people"
+													class="avatar-img rounded-circle">
+											</span>
+											<span class="flex d-flex flex-column">
+												<strong class="text-black-100">Michelle</strong>
+												<span class="text-black-70">🔥 Superb job..</span>
+											</span>
+										</span>
+									</a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- // END Notifications dropdown -->
 
 
-					<li class="sidebar-menu-item active">
-						<a class="sidebar-menu-button" href="instructor-dashboard.html">
-							<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">school</span>
-							<span class="sidebar-menu-text">Student Dashboard</span>
+					<!-- Notifications dropdown -->
+					<div class="nav-item ml-16pt dropdown dropdown-notifications dropdown-xs-down-full"
+						data-toggle="tooltip" data-title="Notifications" data-placement="bottom" data-boundary="window">
+						<button class="nav-link btn-flush dropdown-toggle" type="button" data-toggle="dropdown"
+							data-caret="false">
+							<i class="material-icons">notifications_none</i>
+							<span class="badge badge-notifications badge-accent">2</span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div data-perfect-scrollbar class="position-relative">
+								<div class="dropdown-header"><strong>System notifications</strong></div>
+								<div class="list-group list-group-flush mb-0">
+
+									<a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
+										<span class="d-flex align-items-center mb-1">
+											<small class="text-black-50">3 minutes ago</small>
+
+											<span class="ml-auto unread-indicator bg-accent"></span>
+
+										</span>
+										<span class="d-flex">
+											<span class="avatar avatar-xs mr-2">
+												<span class="avatar-title rounded-circle bg-light">
+													<i
+														class="material-icons font-size-16pt text-accent">account_circle</i>
+												</span>
+											</span>
+											<span class="flex d-flex flex-column">
+
+												<span class="text-black-70">Your profile information has not been synced
+													correctly.</span>
+											</span>
+										</span>
+									</a>
+
+									<a href="javascript:void(0);" class="list-group-item list-group-item-action">
+										<span class="d-flex align-items-center mb-1">
+											<small class="text-black-50">5 hours ago</small>
+
+										</span>
+										<span class="d-flex">
+											<span class="avatar avatar-xs mr-2">
+												<span class="avatar-title rounded-circle bg-light">
+													<i class="material-icons font-size-16pt text-primary">group_add</i>
+												</span>
+											</span>
+											<span class="flex d-flex flex-column">
+												<strong class="text-black-100">Adrian. D</strong>
+												<span class="text-black-70">Wants to join your private group.</span>
+											</span>
+										</span>
+									</a>
+
+									<a href="javascript:void(0);" class="list-group-item list-group-item-action">
+										<span class="d-flex align-items-center mb-1">
+											<small class="text-black-50">1 day ago</small>
+
+										</span>
+										<span class="d-flex">
+											<span class="avatar avatar-xs mr-2">
+												<span class="avatar-title rounded-circle bg-light">
+													<i class="material-icons font-size-16pt text-warning">storage</i>
+												</span>
+											</span>
+											<span class="flex d-flex flex-column">
+
+												<span class="text-black-70">Your deploy was successful.</span>
+											</span>
+										</span>
+									</a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- // END Notifications dropdown -->
+
+
+					<div class="nav-item dropdown">
+						<a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown"
+							data-caret="false">
+
+							<span class="avatar avatar-sm mr-8pt2">
+
+								<span class="avatar-title rounded-circle bg-primary"><i
+										class="material-icons">account_box</i></span>
+
+							</span>
+
 						</a>
-					</li>
-					<li class="sidebar-menu-item">
-						<a class="sidebar-menu-button" href="{% url 'personality:test' %}">
-							<span
-								class="material-icons sidebar-menu-icon sidebar-menu-icon--left">import_contacts</span>
-							<span class="sidebar-menu-text">Take Interest Profile Test</span>
-						</a>
-					</li>
-					<li class="sidebar-menu-item">
-						<a class="sidebar-menu-button" href="{% url 'rankings' %}">
-							<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">help</span>
-							<span class="sidebar-menu-text">Recommend Career</span>
-						</a>
-					</li>
-					
+						<div class="dropdown-menu dropdown-menu-right">
+							<div class="dropdown-header"><strong>Account</strong></div>
+							<a class="dropdown-item" href="edit-account.html">Edit Account</a>
+							<a class="dropdown-item" href="billing.html">Billing</a>
+							<a class="dropdown-item" href="billing-history.html">Payments</a>
+							{% if user.is_authenticated %}
+							<a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+							{% else %}
+							<a class="dropdown-item" href="{% url 'login' %}">Login</a>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
 
-				</ul>
+			<!-- // END Header -->
+
+
+
+			<div class="pt-32pt">
+				<div
+					class="container page__container d-flex flex-column flex-md-row align-items-center text-center text-sm-left">
+					<div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
+
+						<div class="mb-24pt mb-sm-0 mr-sm-24pt">
+							<h2 class="mb-0">Dashboard</h2>
+
+							<ol class="breadcrumb p-0 m-0">
+								<li class="breadcrumb-item"><a href="{% url 'studentdashboard' %}">Home</a></li>
+
+								<li class="breadcrumb-item active">
+
+									Dashboard
+
+								</li>
+
+							</ol>
+
+						</div>
+					</div>
+
+
+					<div class="row" role="tablist">
+						<div class="col-auto">
+							<a href="#" onclick="history.back()" class="btn btn-outline-secondary">Go back</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			{% block body_block %}
+
+
+			{% endblock %}
+
+			<div class="js-fix-footer2 bg-white border-top-2">
+				<div class="container page__container page-section d-flex flex-column">
+					<p class="text-70 brand mb-24pt">
+						<img class="brand-icon" src="assets/images/logo/black-70@2x.png" width="30" alt="Luma"> Luma
+					</p>
+					<p class="measure-lead-max text-50 small mr-8pt">Luma is a beautifully crafted user interface for
+						modern Education Platforms, including Courses & Tutorials, Video Lessons, Student and Teacher
+						Dashboard, Curriculum Management, Earnings and Reporting, ERP, HR, CMS, Tasks, Projects,
+						eCommerce and more.</p>
+					<p class="mb-8pt d-flex">
+						<a href="" class="text-70 text-underline mr-8pt small">Terms</a>
+						<a href="" class="text-70 text-underline small">Privacy policy</a>
+					</p>
+					<p class="text-50 small mt-n1 mb-0">Copyright 2019 &copy; All rights reserved.</p>
+				</div>
+			</div>
+
+
+		</div>
+		<!-- // END drawer-layout__content -->
+
+
+
+
+		<!-- drawer -->
+		<div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+			<div class="mdk-drawer__content">
+				<div class="sidebar sidebar-dark-dodger-blue sidebar-left" data-perfect-scrollbar>
+
+
+					<div class="d-flex align-items-center navbar-height">
+						<form action="index.html" class="search-form search-form--black mx-16pt pr-0 pl-16pt">
+							<input type="text" class="form-control pl-0" placeholder="Search">
+							<button class="btn" type="submit"><i class="material-icons">search</i></button>
+						</form>
+					</div>
+
+
+
+					<a href="index.html" class="sidebar-brand ">
+						<!-- <img class="sidebar-brand-icon" src="assets/images/illustration/teacher/128/white.svg" alt="Luma"> -->
+
+						<span class="avatar avatar-xl sidebar-brand-icon h-auto">
+
+							<span class="avatar-title rounded bg-primary"><img
+									src="assets/images/illustration/teacher/128/white.svg" class="img-fluid"
+									alt="logo" /></span>
+
+						</span>
+
+						<span>Luma</span>
+					</a>
+
+
+
+
+
+					<div class="sidebar-heading">Student</div>
+					<ul class="sidebar-menu">
+
+
+						<li class="sidebar-menu-item {{student_dashboard}}">
+							<a class="sidebar-menu-button" href="instructor-dashboard.html">
+								<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">school</span>
+								<span class="sidebar-menu-text">Student Dashboard</span>
+							</a>
+						</li>
+						<li class="sidebar-menu-item {{profile_test}}">
+							<a class="sidebar-menu-button" href="{% url 'personality:test' %}">
+								<span
+									class="material-icons sidebar-menu-icon sidebar-menu-icon--left">import_contacts</span>
+								<span class="sidebar-menu-text">Take Interest Profile Test</span>
+							</a>
+						</li>
+						<li class="sidebar-menu-item {{recomm_career}}">
+							<a class="sidebar-menu-button" href="{% url 'rankings' %}">
+								<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">help</span>
+								<span class="sidebar-menu-text">Recommend Career</span>
+							</a>
+						</li>
+
+
+					</ul>
+				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 	</div>
 	<!-- // END drawer-layout -->
 	<script src="{% static 'js/ranking.js' %}"></script>
+=======
+		<!-- // END drawer-layout -->
+>>>>>>> 6e35fc55b1b503aca5185df5e2010515e4f05082
 
-	<!-- jQuery -->
-	
-	<script src="{% static 'js/jquery.min.js' %}"></script>
+		<!-- jQuery -->
 
-	<!-- Bootstrap -->
-	<script src="{% static 'js/popper.min.js' %}"></script>
-	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'js/jquery.min.js' %}"></script>
 
-	<!-- Perfect Scrollbar -->
-	<script src="{% static 'js/perfect-scrollbar.min.js' %}"></script>
+		<!-- Bootstrap -->
+		<script src="{% static 'js/popper.min.js' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
 
-	<!-- DOM Factory -->
-	<script src="{% static 'js/dom-factory.js' %}"></script>
+		<!-- Perfect Scrollbar -->
+		<script src="{% static 'js/perfect-scrollbar.min.js' %}"></script>
 
-	<!-- MDK -->
-	<script src="{% static 'js/material-design-kit.js' %}"></script>
+		<!-- DOM Factory -->
+		<script src="{% static 'js/dom-factory.js' %}"></script>
 
-	<!-- Fix Footer -->
-	<script src="{% static 'js/fix-footer.js' %}"></script>
+		<!-- MDK -->
+		<script src="{% static 'js/material-design-kit.js' %}"></script>
 
-	<!-- App JS -->
-	<script src="{% static 'js/app.js' %}"></script>
+		<!-- Fix Footer -->
+		<script src="{% static 'js/fix-footer.js' %}"></script>
+
+		<!-- App JS -->
+		<script src="{% static 'js/app.js' %}"></script>
 
 
-	<!-- Global Settings -->
-	<script src="{% static 'js/settings.js' %}"></script>
+		<!-- Global Settings -->
+		<script src="{% static 'js/settings.js' %}"></script>
 
-	<!-- Moment.js -->
-	<script src="{% static 'js/moment.min.js' %}"></script>
-	<script src="{% static 'js/moment-range.min.js' %}"></script>
+		<!-- Moment.js -->
+		<script src="{% static 'js/moment.min.js' %}"></script>
+		<script src="{% static 'js/moment-range.min.js' %}"></script>
 
-	<!-- Chart.js -->
-	<script src="{% static 'js/Chart.min.js' %}"></script>
+		<!-- Chart.js -->
+		<script src="{% static 'js/Chart.min.js' %}"></script>
 
-	<!-- UI Charts Page JS -->
-	<script src="{% static 'js/chartjs-rounded-bar.js' %}"></script>
-	<script src="{% static 'js/chartjs.js' %}"></script>
+		<!-- UI Charts Page JS -->
+		<script src="{% static 'js/chartjs-rounded-bar.js' %}"></script>
+		<script src="{% static 'js/chartjs.js' %}"></script>
 
-	<!-- Chart.js Samples -->
-	<script src="{% static 'js/page.instructor-dashboard.js' %}"></script>
+		<!-- Chart.js Samples -->
+		<script src="{% static 'js/page.instructor-dashboard.js' %}"></script>
 
-	<!-- List.js -->
-	<script src="{% static 'js/list.min.js' %}"></script>
-	<script src="{% static 'js/list.js' %}"></script>
+		<!-- List.js -->
+		<script src="{% static 'js/list.min.js' %}"></script>
+		<script src="{% static 'js/list.js' %}"></script>
 
 </body>
 
