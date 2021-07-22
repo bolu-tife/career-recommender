@@ -1,0 +1,308 @@
+{% extends "personality/base.html" %}
+{% load static %}
+
+{% block body_block %}
+
+<div class="form">
+
+<div class="bg-primary pb-lg-64pt py-32pt">
+                    <div class="container page__container">
+                        <nav class="course-nav">
+                            <a href="student-take-lesson.html" data-toggle="tooltip" data-placement="bottom" data-title="Getting Started with Angular: Introduction" data-original-title="" title=""><span class="material-icons">check_circle</span></a>
+                            <a data-toggle="tooltip" data-placement="bottom" data-title="Getting Started with Angular: Introduction to TypeScript" href="student-take-lesson.html" data-original-title="" title=""><span class="material-icons">check_circle</span></a>
+                            <a data-toggle="tooltip" data-placement="bottom" data-title="Getting Started with Angular: Comparing Angular to AngularJS" href="student-take-lesson.html" data-original-title="" title=""><span class="material-icons">check_circle</span></a>
+                            <a href="student-take-quiz.html" data-toggle="tooltip" data-placement="bottom" data-title="Quiz: Getting Started with Angular" data-original-title="" title=""><span class="material-icons text-primary">account_circle</span></a>
+                        </nav>
+
+                        <div class="d-flex flex-wrap align-items-end justify-content-end mb-16pt">
+                            <h1 class="text-white flex m-0">60 Questions</h1>
+                        </div>
+
+                        <p class="hero__lead measure-hero-lead text-white-50" id="question"></p>
+
+                         
+    <button style="
+    float: right;font-size: 1.4rem;color: blue;border-color: blue;background-color: white;" class="btn btn-outline-secondary" id="getWord">Next</button>
+                    </div>
+                </div>
+
+
+
+
+<div class="container page__container">
+                    <div class="page-section" style="font-size: 1.4rem;">
+                        <div class="page-separator">
+                            
+                        </div>
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input name="answer" id="customCheck01" type="radio" class="custom-control-input" checked value="1">
+                                <label for="customCheck01" class="custom-control-label">Strongly Disike</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input name="answer" id="customCheck02" type="radio" class="custom-control-input" value="2" >
+                                <label for="customCheck02" class="custom-control-label">Disike</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input name="answer" id="customCheck03" type="radio" class="custom-control-input" value="3">
+                                <label for="customCheck03" class="custom-control-label">Unsure</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input name="answer" id="customCheck04" type="radio" class="custom-control-input" value="4" >
+                                <label for="customCheck04" class="custom-control-label"> Like</label>
+                            </div>
+                        </div>
+                        <div class="form-group mb-32pt mb-lg-48pt">
+                            <div class="custom-control custom-checkbox">
+                                <input name="answer" value="5" id="customCheck05" type="radio" class="custom-control-input">
+                                <label for="customCheck05" class="custom-control-label">Strongly Like</label>
+                                <div class="col-auto">
+                       
+                            </div>
+
+                            
+
+                        </div>
+                        
+
+
+                        
+                    </div>
+
+
+                </div>
+
+
+
+
+</div>
+
+
+
+<div id='token' style="visibility:hidden">{%csrf_token%}</div>
+
+
+
+
+
+    
+    <div class= "content">
+    <div class="container">
+
+    <div class="form">
+        <label id="question1" ></label>
+        <input style="visibility:hidden" type="text" id="guess" name="word" class="text-box"><br>
+
+        
+            <div class="button-block">
+
+        <button style="visibility:hidden" class="button" id="check">Check</button>
+        <button style="visibility:hidden" class="button" id="getWord">GetWord</button>
+        </div>
+    </div>
+    </div>
+    
+</div>
+
+<div id='token' style="visibility:hidden">{%csrf_token%}</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+
+// $("input:radio[name=answer]").click(function() {
+//         var value = $(this).val();
+        
+        
+// //     });
+//  var callWord = (randomVar) => {
+
+//             if (count <= total) {
+                
+//                 var input = document.querySelector('input[name="answer"]:checked').value
+                
+//             } else {
+                
+                
+//                 document.getElementById('guess').style.display = "none";
+                
+//                 getWordButton.disabled = true;
+//                 checkButton.disabled = true;
+                
+//             }
+
+//         }
+
+
+
+
+        const wordList = {{ data | safe }}
+        
+        const level1 =  {{ area|safe }};
+        console.log(level1)
+        console.log(wordList)
+
+       
+        const difficultWords = [];
+        var checkButton = document.getElementById("check");
+        var getWordButton = document.getElementById("getWord");
+        // var accuracyValue = document.getElementById("accuracyValue");
+        var input = document.getElementById('guess').value.toLowerCase();
+        var randomVar =0;
+        var count = 0;
+        // var total = wordLimit; 
+        var count = 0;
+        var total = 0
+        var sum = 0;
+        var rscore = 0;
+        var score = 0;
+        var accuracy = 0;
+        var totalAccuracy = accuracy + "%";
+        var Realistic = 0;
+        var Investigative = 0;
+        var Artistic = 0;
+        var Social = 0;
+        var Enterprising = 0;
+        var Conventional = 0
+
+        getWordButton.disabled = false;
+        checkButton.disabled = false;
+        document.getElementById("question").innerHTML = wordList[randomVar]
+
+
+        var callWord = (randomVar) => {
+
+            if (count <= 10) {
+
+
+                document.getElementById("question").innerHTML = wordList[randomVar]
+                var input = document.getElementById('guess').value;
+
+            } else {
+
+                document.getElementById('question').style.display = "none";
+                document.getElementById('guess').style.display = "none";
+                getWordButton.style.display = "none";
+                checkButton.style.display = "none";
+                
+                getWordButton.disabled = true;
+                checkButton.disabled = true;
+                const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+                let form = new FormData()
+                form.append('Realistic', Realistic)
+                form.append('Investigative', Investigative)
+                form.append('Artistic', Artistic)
+                form.append('Social', Social)
+                form.append('Enterprising', Enterprising)
+                form.append('Conventional', Conventional)
+
+                // form.append('csrfmiddlewaretoken', '{{csrf_token}}')
+
+                // fetch('save/', {
+                //     method: 'POST',
+                //     body: form,
+                // }).then(res => { res.json() }).then(data => console.log(data));
+
+
+                var xhttp = new XMLHttpRequest();
+
+                xhttp.onreadystatechange = function() {
+                    console.log("hit")
+                    if ( this.status == 302) {
+                        var json = JSON.parse(this.responseText); 
+                        
+                        console.log(json.url);
+                        window.location.href = json.url;
+                    }
+                };
+
+                xhttp.open("POST", "/personalitytest/take/save/", true);
+                xhttp.setRequestHeader("X-CSRFToken", csrftoken);
+                // var data = new FormData();
+                // data.append('data', blob, filename);
+                xhttp.send(form);
+
+
+                }
+
+        }
+
+        var validateInput = (randomVar) => {
+            // var input = document.getElementById('guess').value.toLowerCase();
+            // console($('input[name="answer"]:checked').val())
+            var input = parseInt(document.querySelector('input[name="answer"]:checked').value)
+            console.log(input)
+            // console.log(randomVar + "from check button")
+            if ('Realistic' === level1[randomVar]) {
+
+                Realistic+=input;
+            }
+            else if('Investigative' === level1[randomVar]) {
+
+                Investigative+=input;
+            }
+            else if('Artistic' === level1[randomVar]) {
+
+                Artistic+=input;
+            }
+            else if('Social' === level1[randomVar]) {
+
+                Social+=input;
+            }
+            else if('Enterprising' === level1[randomVar]) {
+
+                Enterprising+=input;
+            }
+            else {
+
+                Conventional+=input;
+            }
+            
+            console.log(Investigative);
+
+
+
+        }
+        // var speech = new SpeechSynthesisUtterance();
+
+        checkButton.addEventListener("click", function () {
+            
+            // document.getElementById('answer').value = '';
+        })
+
+        getWordButton.addEventListener("click", () => {
+            validateInput(randomVar);
+            // randomVar = Math.floor(Math.random() * level1.length);
+            randomVar += 1
+            count++;
+            callWord(randomVar);
+        })
+
+        
+        
+
+        
+
+    
+</script>
+
+
+
+{% endblock %}

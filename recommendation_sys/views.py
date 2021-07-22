@@ -12,6 +12,8 @@ from personality.models import User_Personality
 def index(request):
     return render(request, 'recommendation_sys/index.html')
 
+def indexx(request):
+    return render(request, 'recommendation_sys/indexx.html')
 
 def login(request):
     if request.method == 'POST':
@@ -156,7 +158,7 @@ def rankings_both(request):
     person = student.objects.get(Identification_no=u)
     results = None
     record = [0.0 for i in range(6)]
-
+    student_id = str(person.id-1)
     if User_Personality.objects.filter(user_id=person):
         results = list(User_Personality.objects.filter(
             user_id=person).values())

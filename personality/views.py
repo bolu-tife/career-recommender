@@ -1,5 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
+from django.urls import reverse
 from .forms import get_form
 from .models import User_Personality, Questions
 from account.models import student
@@ -262,13 +263,20 @@ def result(request):
                'results': record,
                'message': message,
                'profile_test': 'active',
+               'Realistic': record[0]*5,
+               'Investigative':record[1]*5,
+               'Artistic':record[2]*5,
+               'Social': record[3]*5,
+               'Enterprising':record[4]*5,
+               'Conventional': record[5]*5,
+               
                'crumb': 'Profile Test'}
     print(results, record, "uu")
 
     return render(request, 'personality/result.html', context)
 
 
-def fisa(request):
+def take(request):
     try:
         # child_user = Child.objects.get(user=request.user)
 
@@ -291,34 +299,47 @@ def fisa(request):
             'area': area_list,
             # 'wordlimit': wordlimit,
         }
-        return render(request, 'personality/fisa.html', context)
+        return render(request, 'personality/take.html', context)
     except:
   
-        return render(request, 'personality/fisa.html', {})
+        return render(request, 'personality/take.html', {})
 
 def save(request):
     if request.method == 'POST':
         u = User.objects.get(username=request.user.get_username())
         person = student.objects.get(Identification_no=u)
-        Realistic = request.POST.get('Realistic')
-        Investigative = request.POST.get('Investigative')
-        Artistic = request.POST.get('Artistic')
-        Social = request.POST.get('Social')
-        Enterprising = request.POST.get('Enterprising')
-        Conventional = request.POST.get('Conventional')
+        Realistic = float(request.POST.get('Realistic'))
+        Investigative = float(request.POST.get('Investigative'))
+        Artistic = float(request.POST.get('Artistic'))
+        Social = float(request.POST.get('Social'))
+        Enterprising = float(request.POST.get('Enterprising'))
+        Conventional = float(request.POST.get('Conventional'))
+
+        result_url = reverse('personality:result')
+
+        
+        print(result_url)
+        print()
+
 
         print(person)
         try:
 
-            person = student.objects.get(Identification_no=user)
+            # person = student.objects.get(Identification_no=person)
+            print(person)
             user_pers, created = User_Personality.objects.update_or_create(user_id=person, defaults={
                                                                            'Realistic': Realistic/5, 'Investigative': Investigative/5, 'Artistic': Artistic/5, 'Social': Social/5, 'Enterprising': Enterprising/5, 'Conventional': Conventional/5, })
-            print(user_pers)
+            print('hello', user_pers)
 
-            return render(request, 'personality/test.html')
+            
+            return JsonResponse(status=302, data={"url": request.build_absolute_uri(result_url)})
+
+            # return redirect('personalitytest:test')
             # return JsonResponse({'status': 'success'})
 
-        except:
+        except :
+            # print(e)
+            print('bye', user_pers)
             print(request)
             return render(request, 'personality/test.html')
     return render(request, 'personality/test.html')

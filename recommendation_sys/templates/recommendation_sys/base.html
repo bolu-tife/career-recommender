@@ -69,12 +69,12 @@
 					<span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
 
 						<span class="avatar-title rounded bg-primary"><img
-								src="assets/images/illustration/student/128/white.svg" alt="logo"
+ alt="logo"
 								class="img-fluid" /></span>
 
 					</span>
 
-					<span class="d-none d-lg-block">Luma</span>
+					<span class="d-none d-lg-block">CAP framework</span>
 				</a>
 
 				<div class="flex"></div>
@@ -157,22 +157,7 @@
 
 			{% endblock %}
 
-			<div class="js-fix-footer2 bg-white border-top-2">
-				<div class="container page__container page-section d-flex flex-column">
-					<p class="text-70 brand mb-24pt">
-						<img class="brand-icon" src="assets/images/logo/black-70@2x.png" width="30" alt="Luma"> Luma
-					</p>
-					<p class="measure-lead-max text-50 small mr-8pt">Luma is a beautifully crafted user interface for
-						modern Education Platforms, including Courses & Tutorials, Video Lessons, Student and Teacher
-						Dashboard, Curriculum Management, Earnings and Reporting, ERP, HR, CMS, Tasks, Projects,
-						eCommerce and more.</p>
-					<p class="mb-8pt d-flex">
-						<a href="" class="text-70 text-underline mr-8pt small">Terms</a>
-						<a href="" class="text-70 text-underline small">Privacy policy</a>
-					</p>
-					<p class="text-50 small mt-n1 mb-0">Copyright 2019 &copy; All rights reserved.</p>
-				</div>
-			</div>
+			
 
 
 		</div>
@@ -197,17 +182,9 @@
 
 
 					<a href="index.html" class="sidebar-brand ">
-						<!-- <img class="sidebar-brand-icon" src="assets/images/illustration/teacher/128/white.svg" alt="Luma"> -->
+						
 
-						<span class="avatar avatar-xl sidebar-brand-icon h-auto">
-
-							<span class="avatar-title rounded bg-primary"><img
-									src="assets/images/illustration/teacher/128/white.svg" class="img-fluid"
-									alt="logo" /></span>
-
-						</span>
-
-						<span>Luma</span>
+						<span>CAP framework</span>
 					</a>
 
 
@@ -225,10 +202,16 @@
 							</a>
 						</li>
 						<li class="sidebar-menu-item {{profile_test}}">
-							<a class="sidebar-menu-button" href="{% url 'personality:test' %}">
+							<a class="sidebar-menu-button" href="{% url 'personality:take' %}">
 								<span
 									class="material-icons sidebar-menu-icon sidebar-menu-icon--left">import_contacts</span>
 								<span class="sidebar-menu-text">Take Interest Profile Test</span>
+							</a>
+						</li>
+						<li class="sidebar-menu-item {{recomm_career}}">
+							<a class="sidebar-menu-button" href="{% url 'personality:result' %}">
+								<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">help</span>
+								<span class="sidebar-menu-text">Profile Result</span>
 							</a>
 						</li>
 						<li class="sidebar-menu-item {{recomm_career}}">
@@ -240,16 +223,43 @@
 
 
 					</ul>
+
+					<div class="sidebar-heading">Recommend Career</div>
+					<ul class="sidebar-menu">
+
+
+						<li class="sidebar-menu-item {{student_dashboard}}">
+							<a class="sidebar-menu-button" href="{% url 'rankings_acad' %}">
+								<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">school</span>
+								<span class="sidebar-menu-text">Transcript</span>
+							</a>
+						</li>
+						<li class="sidebar-menu-item {{profile_test}}">
+							<a class="sidebar-menu-button" href="{% url 'rankings_pers' %}">
+								<span
+									class="material-icons sidebar-menu-icon sidebar-menu-icon--left">import_contacts</span>
+								<span class="sidebar-menu-text">Personality</span>
+							</a>
+						</li>
+						<li class="sidebar-menu-item {{recomm_career}}">
+							<a class="sidebar-menu-button" href="{% url 'rankings_both' %}">
+								<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">help</span>
+								<span class="sidebar-menu-text">Transcript and Personality</span>
+							</a>
+						</li>
+
+
+					</ul>
+
+
 				</div>
 			</div>
 		</div>
-<<<<<<< HEAD
+
 	</div>
 	<!-- // END drawer-layout -->
 	<script src="{% static 'js/ranking.js' %}"></script>
-=======
-		<!-- // END drawer-layout -->
->>>>>>> 6e35fc55b1b503aca5185df5e2010515e4f05082
+t
 
 		<!-- jQuery -->
 

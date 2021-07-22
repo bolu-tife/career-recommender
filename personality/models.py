@@ -13,20 +13,10 @@ class User_Personality(models.Model):
 
 class Questions(models.Model):
 
-# 	ANSWER_CHOICES = (
-#     (1, 'Strongly Dislike'),
-#     (2, 'Dislike'),
-#     (3, 'Unsure'),
-#     (4, 'Like'),
-#     (5, 'StronglyLike'),
-# )
 
 	Question = models.CharField(max_length=300)
 	area = models.CharField(max_length=30)
-	# answers = max_length=2,
- #        choices=ANSWER_CHOICES,
- #        default=1,
-
+	
 
 	def __str__(self):
 		return self.Question
