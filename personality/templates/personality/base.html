@@ -3,297 +3,201 @@
 <html lang="en" dir="ltr">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Dashboard</title>
-
-	<!-- Prevent the demo from appearing in search engines -->
-	<meta name="robots" content="noindex">
-
-	<link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap"
-		rel="stylesheet">
-
-	<!-- Perfect Scrollbar -->
-	<!-- Perfect Scrollbar -->
-	<link type="text/css" href="{% static 'css/perfect-scrollbar.css' %}" rel="stylesheet">
-	
-	<!-- Fix Footer CSS -->
-	<link type="text/css" href="{% static 'css/fix-footer.css' %}" rel="stylesheet">
-	
-	<!-- Material Design Icons -->
-	<link type="text/css" href="{% static 'css/material-icons.css' %}" rel="stylesheet">
-	
-	
-	<!-- Font Awesome Icons -->
-	<link type="text/css" href="{% static 'css/fontawesome.css' %}" rel="stylesheet">
-	
-	
-	<!-- Preloader -->
-	<link type="text/css" href="{% static 'css/preloader.css' %}" rel="stylesheet">
-	
-	
-	<!-- App CSS -->
-	<link type="text/css" href="{% static 'css/app.css' %}" rel="stylesheet">
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard</title>
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&display=swap" rel="stylesheet">
+    <!-- Perfect Scrollbar -->
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" href="{% static 'css/perfect-scrollbar.css' %}" rel="stylesheet">
+    <!-- Fix Footer CSS -->
+    <link type="text/css" href="{% static 'css/fix-footer.css' %}" rel="stylesheet">
+    <!-- Material Design Icons -->
+    <link type="text/css" href="{% static 'css/material-icons.css' %}" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link type="text/css" href="{% static 'css/fontawesome.css' %}" rel="stylesheet">
+    <!-- Preloader -->
+    <link type="text/css" href="{% static 'css/preloader.css' %}" rel="stylesheet">
+    <!-- App CSS -->
+    <link type="text/css" href="{% static 'css/app.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'personality/questions.css' %}" rel="stylesheet">
+    <style type="text/css">
+    .show {
+        color: black !important;
+    }
+    </style>
 </head>
+
 <body class="layout-app ">
-
-	<div class="preloader">
-		<div class="sk-double-bounce">
-			<div class="sk-child sk-double-bounce1"></div>
-			<div class="sk-child sk-double-bounce2"></div>
-		</div>
-	</div>
-</div>
-
-<div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
-	<div class="mdk-drawer-layout__content page-content">
-
-		<!-- Header -->
-
-		<div class="navbar navbar-expand pr-0 navbar-light border-bottom-2" id="default-navbar" data-primary>
-			<!-- Navbar toggler -->
-			<button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button"
-				data-toggle="sidebar">
-				<span class="material-icons">short_text</span>
-			</button>
-
-			<!-- Navbar Brand -->
-			<a href="index.html" class="navbar-brand mr-16pt d-lg-none">
-
-				<span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
-
-					
-
-				</span>
-
-				<span class="d-none d-lg-block">CAP framework</span>
-			</a>
-
-			<div class="flex"></div>
-
-
-			<!-- Toggler -->
-			<a href="compact-instructor-dashboard.html"
-				class="navbar-toggler navbar-toggler-custom align-items-center justify-content-center d-none d-lg-flex"
-				data-toggle="tooltip" data-title="Switch to Compact Layout" data-placement="bottom"
-				data-boundary="window">
-				<span class="material-icons">swap_horiz</span>
-			</a>
-
-
-			<div class="nav navbar-nav flex-nowrap d-flex mr-16pt">
-
-				<div class="nav-item dropdown">
-					<a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown"
-						data-caret="false">
-
-						<span class="avatar avatar-sm mr-8pt2">
-
-							<span class="avatar-title rounded-circle bg-primary"><i
-									class="material-icons">account_box</i></span>
-
-						</span>
-
-					</a>
-					<div class="dropdown-menu dropdown-menu-right">
-						<div class="dropdown-header"><strong>Account</strong></div>
-						<a class="dropdown-item" href="edit-account.html">Edit Account</a>
-						{% if user.is_authenticated %}
-						<a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
-						{% else %}
-						<a class="dropdown-item" href="{% url 'login' %}">Login</a>
-						{% endif %}
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- // END Header -->
-
-
-
-		<div class="pt-32pt">
-			<div
-				class="container page__container d-flex flex-column flex-md-row align-items-center text-center text-sm-left">
-				<div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
-
-					<div class="mb-24pt mb-sm-0 mr-sm-24pt">
-						<h2 class="mb-0">Dashboard</h2>
-
-						<ol class="breadcrumb p-0 m-0">
-							<li class="breadcrumb-item"><a href="{% url 'studentdashboard' %}">Home</a></li>
-
-							<li class="breadcrumb-item active">
-
-								{{crumb}}
-
-							</li>
-
-						</ol>
-
-					</div>
-				</div>
-
-
-				<div class="row" role="tablist">
-					<div class="col-auto">
-						<a href="#" onclick="history.back()" class="btn btn-outline-secondary">Go back</a>
-					</div>
-				</div>
-
-			</div>
-		</div>
-
-		{% block body_block %}
-
-
-		{% endblock %}
-
-	
-
-
-	</div>
-	<!-- // END drawer-layout__content -->
-
-
-
-
-	<!-- drawer -->
-	<div class="mdk-drawer js-mdk-drawer" id="default-drawer">
-		<div class="mdk-drawer__content">
-			<div class="sidebar sidebar-dark-dodger-blue sidebar-left" data-perfect-scrollbar>
-
-
-				<div class="d-flex align-items-center navbar-height">
-					<form action="index.html" class="search-form search-form--black mx-16pt pr-0 pl-16pt">
-						<input type="text" class="form-control pl-0" placeholder="Search">
-						<button class="btn" type="submit"><i class="material-icons">search</i></button>
-					</form>
-				</div>
-
-
-
-				<a href="index.html" class="sidebar-brand ">
-					<!-- <img class="sidebar-brand-icon" src="assets/images/illustration/teacher/128/white.svg" alt="Luma"> -->
-
-					CAP Framework
-				</a>
-
-
-
-
-
-				<div class="sidebar-heading">Student</div>
-				<ul class="sidebar-menu">
-
-
-					<li class="sidebar-menu-item {{student_dashboard}}">
-						<a class="sidebar-menu-button" href="{% url 'studentdashboard' %}">
-							<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">school</span>
-							<span class="sidebar-menu-text">Student Dashboard</span>
-						</a>
-					</li>
-					<li class="sidebar-menu-item {{profile_test}}">
-						<a class="sidebar-menu-button" href="{% url 'personality:take' %}">
-							<span
-								class="material-icons sidebar-menu-icon sidebar-menu-icon--left">import_contacts</span>
-							<span class="sidebar-menu-text">Take Interest Profile Test</span>
-						</a>
-					</li>
-					<li class="sidebar-menu-item {{recomm_career}}">
-							<a class="sidebar-menu-button" href="{% url 'personality:result' %}">
-								<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">help</span>
-								<span class="sidebar-menu-text">Profile Result</span>
-							</a>
-						</li>
-					<li class="sidebar-menu-item {{recomm_career}}">
-						<a class="sidebar-menu-button" href="{% url 'rankings' %}">
-							<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">help</span>
-							<span class="sidebar-menu-text">Recommend Career</span>
-						</a>
-					</li>
-					
-
-				</ul>
-
-				<div class="sidebar-heading">Recommend Career</div>
-					<ul class="sidebar-menu">
-
-
-						<li class="sidebar-menu-item {{student_dashboard}}">
-							<a class="sidebar-menu-button" href="{% url 'rankings_acad' %}">
-								<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">school</span>
-								<span class="sidebar-menu-text">Transcript</span>
-							</a>
-						</li>
-						<li class="sidebar-menu-item {{profile_test}}">
-							<a class="sidebar-menu-button" href="{% url 'rankings_pers' %}">
-								<span
-									class="material-icons sidebar-menu-icon sidebar-menu-icon--left">import_contacts</span>
-								<span class="sidebar-menu-text">Personality</span>
-							</a>
-						</li>
-						<li class="sidebar-menu-item {{recomm_career}}">
-							<a class="sidebar-menu-button" href="{% url 'rankings_both' %}">
-								<span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">help</span>
-								<span class="sidebar-menu-text">Transcript and Personality</span>
-							</a>
-						</li>
-
-
-					</ul>
-			</div>
-		</div>
-	</div>
-	<!-- // END drawer-layout -->
-
-	<!-- jQuery -->
-	
-	<script src="{% static 'js/jquery.min.js' %}"></script>
-
-	<!-- Bootstrap -->
-	<script src="{% static 'js/popper.min.js' %}"></script>
-	<script src="{% static 'js/bootstrap.min.js' %}"></script>
-
-	<!-- Perfect Scrollbar -->
-	<script src="{% static 'js/perfect-scrollbar.min.js' %}"></script>
-
-	<!-- DOM Factory -->
-	<script src="{% static 'js/dom-factory.js' %}"></script>
-
-	<!-- MDK -->
-	<script src="{% static 'js/material-design-kit.js' %}"></script>
-
-	<!-- Fix Footer -->
-	<script src="{% static 'js/fix-footer.js' %}"></script>
-
-	<!-- App JS -->
-	<script src="{% static 'js/app.js' %}"></script>
-
-
-	<!-- Global Settings -->
-	<script src="{% static 'js/settings.js' %}"></script>
-
-	<!-- Moment.js -->
-	<script src="{% static 'js/moment.min.js' %}"></script>
-	<script src="{% static 'js/moment-range.min.js' %}"></script>
-
-	<!-- Chart.js -->
-	<script src="{% static 'js/Chart.min.js' %}"></script>
-
-	<!-- UI Charts Page JS -->
-	<script src="{% static 'js/chartjs-rounded-bar.js' %}"></script>
-	<script src="{% static 'js/chartjs.js' %}"></script>
-
-	<!-- Chart.js Samples -->
-	<script src="{% static 'js/page.instructor-dashboard.js' %}"></script>
-
-	<!-- List.js -->
-	<script src="{% static 'js/list.min.js' %}"></script>
-	<script src="{% static 'js/list.js' %}"></script>
-
+    <div class="preloader">
+        <div class="sk-double-bounce">
+            <div class="sk-child sk-double-bounce1"></div>
+            <div class="sk-child sk-double-bounce2"></div>
+        </div>
+    </div>
+    </div>
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-push data-responsive-width="992px">
+        <div class="mdk-drawer-layout__content page-content">
+            <!-- Header -->
+            <div class="navbar navbar-expand pr-0 navbar-light border-bottom-2" id="default-navbar" data-primary>
+                <!-- Navbar toggler -->
+                <button class="navbar-toggler w-auto mr-16pt d-block d-lg-none rounded-0" type="button" data-toggle="sidebar">
+                    <span class="material-icons">short_text</span>
+                </button>
+                <!-- Navbar Brand -->
+                <a href="" class="navbar-brand mr-16pt d-lg-none">
+                    <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
+                    </span>
+                    <span class="d-none d-lg-block">CAP framework</span>
+                </a>
+                <div class="flex"></div>
+                <!-- Toggler -->
+                <a href="#" class="navbar-toggler navbar-toggler-custom align-items-center justify-content-center d-none d-lg-flex" data-toggle="tooltip" data-title="Switch to Compact Layout" data-placement="bottom" data-boundary="window">
+                    <span class="material-icons">swap_horiz</span>
+                </a>
+                <div class="nav navbar-nav flex-nowrap d-flex mr-16pt">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown" data-caret="false">
+                            <span class="avatar avatar-sm mr-8pt2">
+                                <span class="avatar-title rounded-circle bg-primary"><i class="material-icons">account_box</i></span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Account</strong></div>
+                            <a class="dropdown-item" href="edit-account.html">Edit Account</a>
+                            {% if user.is_authenticated %}
+                            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                            {% else %}
+                            <a class="dropdown-item" href="{% url 'login' %}">Login</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // END Header -->
+            <div class="pt-32pt">
+                <div class="container page__container d-flex flex-column flex-md-row align-items-center text-center text-sm-left">
+                    <div class="flex d-flex flex-column flex-sm-row align-items-center mb-24pt mb-md-0">
+                        <div class="mb-24pt mb-sm-0 mr-sm-24pt">
+                            <h2 class="mb-0">Dashboard</h2>
+                            <ol class="breadcrumb p-0 m-0">
+                                <li class="breadcrumb-item"><a href="{% url 'studentdashboard' %}">Home</a></li>
+                                <li class="breadcrumb-item active">
+                                    {{crumb}}
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row" role="tablist">
+                        <div class="col-auto">
+                            <a href="#" onclick="history.back()" class="btn btn-outline-secondary">Go back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% block body_block %}
+            {% endblock %}
+        </div>
+        <!-- // END drawer-layout__content -->
+        <!-- drawer -->
+        <div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+            <div class="mdk-drawer__content">
+                <div class="sidebar sidebar-dark-dodger-blue sidebar-left" data-perfect-scrollbar>
+                    <div class="d-flex align-items-center navbar-height">
+                        <form action="index.html" class="search-form search-form--black mx-16pt pr-0 pl-16pt">
+                            <input type="text" class="form-control pl-0" placeholder="Search">
+                            <button class="btn" type="submit"><i class="material-icons">search</i></button>
+                        </form>
+                    </div>
+                    <a href="index.html" class="sidebar-brand ">
+                        <!-- <img class="sidebar-brand-icon" src="assets/images/illustration/teacher/128/white.svg" alt="Luma"> -->
+                        CAP Framework
+                    </a>
+                    <div class="sidebar-heading">Student</div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item {{student_dashboard}}">
+                            <a class="sidebar-menu-button" href="{% url 'studentdashboard' %}">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">school</span>
+                                <span class="sidebar-menu-text">Student Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item {{profile_test}}">
+                            <a class="sidebar-menu-button" href="{% url 'personality:take' %}">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">import_contacts</span>
+                                <span class="sidebar-menu-text">Take Interest Profile Test</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item {{recomm_career}}">
+                            <a class="sidebar-menu-button" href="{% url 'personality:result' %}">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">help</span>
+                                <span class="sidebar-menu-text">Profile Result</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item {{recomm_career}}">
+                            <a class="sidebar-menu-button" href="{% url 'rankings' %}">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">help</span>
+                                <span class="sidebar-menu-text">Recommend Career</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="sidebar-heading">Recommend Career</div>
+                    <ul class="sidebar-menu">
+                        <li class="sidebar-menu-item {{student_dashboard}}">
+                            <a class="sidebar-menu-button" href="{% url 'rankings_acad' %}">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">school</span>
+                                <span class="sidebar-menu-text">Transcript</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item {{profile_test}}">
+                            <a class="sidebar-menu-button" href="{% url 'rankings_pers' %}">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">import_contacts</span>
+                                <span class="sidebar-menu-text">Personality</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item {{recomm_career}}">
+                            <a class="sidebar-menu-button" href="{% url 'rankings_both' %}">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left">help</span>
+                                <span class="sidebar-menu-text">Transcript and Personality</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- // END drawer-layout -->
+        <!-- jQuery -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <!-- Bootstrap -->
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <!-- Perfect Scrollbar -->
+        <script src="{% static 'js/perfect-scrollbar.min.js' %}"></script>
+        <!-- DOM Factory -->
+        <script src="{% static 'js/dom-factory.js' %}"></script>
+        <!-- MDK -->
+        <script src="{% static 'js/material-design-kit.js' %}"></script>
+        <!-- Fix Footer -->
+        <script src="{% static 'js/fix-footer.js' %}"></script>
+        <!-- App JS -->
+        <script src="{% static 'js/app.js' %}"></script>
+        <!-- Global Settings -->
+        <script src="{% static 'js/settings.js' %}"></script>
+        <!-- Moment.js -->
+        <script src="{% static 'js/moment.min.js' %}"></script>
+        <script src="{% static 'js/moment-range.min.js' %}"></script>
+        <!-- Chart.js -->
+        <script src="{% static 'js/Chart.min.js' %}"></script>
+        <!-- UI Charts Page JS -->
+        <script src="{% static 'js/chartjs-rounded-bar.js' %}"></script>
+        <script src="{% static 'js/chartjs.js' %}"></script>
+        <!-- Chart.js Samples -->
+        <script src="{% static 'js/page.instructor-dashboard.js' %}"></script>
+        <!-- List.js -->
+        <script src="{% static 'js/list.min.js' %}"></script>
+        <script src="{% static 'js/list.js' %}"></script>
 </body>
 
 </html>

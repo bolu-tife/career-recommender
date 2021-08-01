@@ -343,3 +343,74 @@ def save(request):
             print(request)
             return render(request, 'personality/test.html')
     return render(request, 'personality/test.html')
+
+
+
+def testtwo(request):
+    try:
+        # child_user = Child.objects.get(user=request.user)
+
+        quiz_words = Questions.objects.all()
+        area_list = []
+
+        wordList = []
+        for items in quiz_words:
+            wordList.append(str(items))
+
+        for items in quiz_words:
+
+            area_list.append(str(items.area))
+
+
+        context = {
+            # 'newuser': child_user,
+            'word': quiz_words,
+            'data': wordList,
+            'area': area_list,
+            # 'wordlimit': wordlimit,
+        }
+        return render(request, 'personality/testtwo.html', context)
+    except:
+  
+        return render(request, 'personality/testtwo.html', {})
+
+def testtwosave(request):
+    if request.method == 'POST':
+        u = User.objects.get(username=request.user.get_username())
+        person = student.objects.get(Identification_no=u)
+        Realistic = float(request.POST.get('Realistic'))
+        Investigative = float(request.POST.get('Investigative'))
+        Artistic = float(request.POST.get('Artistic'))
+        Social = float(request.POST.get('Social'))
+        Enterprising = float(request.POST.get('Enterprising'))
+        Conventional = float(request.POST.get('Conventional'))
+
+        result_url = reverse('personality:result')
+
+        
+        print(result_url)
+        print()
+
+
+        print(person)
+        try:
+
+            # person = student.objects.get(Identification_no=person)
+            print(person)
+            user_pers, created = User_Personality.objects.update_or_create(user_id=person, defaults={
+                                                                           'Realistic': Realistic/5, 'Investigative': Investigative/5, 'Artistic': Artistic/5, 'Social': Social/5, 'Enterprising': Enterprising/5, 'Conventional': Conventional/5, })
+            print('hello', user_pers)
+
+            
+            return JsonResponse(status=302, data={"url": request.build_absolute_uri(result_url)})
+
+            # return redirect('personalitytest:test')
+            # return JsonResponse({'status': 'success'})
+
+        except :
+            # print(e)
+            print('bye', user_pers)
+            print(request)
+            return render(request, 'personality/test.html')
+    return render(request, 'personality/test.html')
+

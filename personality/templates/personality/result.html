@@ -1,107 +1,84 @@
 {% extends "personality/base.html" %}
 {% load static %}
-
 {% block body_block %}
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- semantic UI -->
-    <link rel="stylesheet" type='text/css'
-        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
     <!-- Chart js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
-        integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"
-        integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
-
-
 <div class="page-section border-bottom-2">
-                    <div class="container page__container">
-
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="card border-1 border-left-3 border-left-accent text-center mb-lg-0">
-                                    <div class="card-body">
-                                        <h4 class="h2 mb-0">{{Realistic}}</h4>
-                                        <div>Realistic</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="card text-center mb-lg-0">
-                                    <div class="card-body">
-                                        <h4 class="h2 mb-0">{{Investigative}}</h4>
-                                        <div>Investigative</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="card text-center mb-lg-0">
-                                    <div class="card-body">
-                                        <h4 class="h2 mb-0">{{Artistic}}</h4>
-                                        <div>Artisitic</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                    <div class="page-separator">
-                        {# <div class="page-separator__text">Result</div> #}
-                    </div>
-
-                    <div class="container page__container">
-
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="card border-1 border-left-3 border-left-accent text-center mb-lg-0">
-                                    <div class="card-body">
-                                        <h4 class="h2 mb-0">{{Social}}</h4>
-                                        <div>Social</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="card text-center mb-lg-0">
-                                    <div class="card-body">
-                                        <h4 class="h2 mb-0">{{Enterprising}}</h4>
-                                        <div>Enterprising</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="card text-center mb-lg-0">
-                                    <div class="card-body">
-                                        <h4 class="h2 mb-0">{{Conventional}}</h4>
-                                        <div>Conventional</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        
-
+    <div class="container page__container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card border-1 border-left-3 border-left-accent text-center mb-lg-0">
+                    <div class="card-body">
+                        <h4 class="h2 mb-0">{{Realistic}}</h4>
+                        <div>Realistic</div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
+            </div>
+            <div class="col-lg-4">
+                <div class="card text-center mb-lg-0">
+                    <div class="card-body">
+                        <h4 class="h2 mb-0">{{Investigative}}</h4>
+                        <div>Investigative</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card text-center mb-lg-0">
+                    <div class="card-body">
+                        <h4 class="h2 mb-0">{{Artistic}}</h4>
+                        <div>Artisitic</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-separator">
+        {# <div class="page-separator__text">Result</div> #}
+    </div>
+    <div class="container page__container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card border-1 border-left-3 border-left-accent text-center mb-lg-0">
+                    <div class="card-body">
+                        <h4 class="h2 mb-0">{{Social}}</h4>
+                        <div>Social</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card text-center mb-lg-0">
+                    <div class="card-body">
+                        <h4 class="h2 mb-0">{{Enterprising}}</h4>
+                        <div>Enterprising</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card text-center mb-lg-0">
+                    <div class="card-body">
+                        <h4 class="h2 mb-0">{{Conventional}}</h4>
+                        <div>Conventional</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="page-section border-bottom-2">
     <div class="container page__container">
         <div class="row align-items-start">
             <div class="col-md-8">
-
                 <div class="page-separator">
                     <div class="page-separator__text">Result</div>
                 </div>
@@ -109,12 +86,9 @@
                     <li class="list-group-item d-flex">
                         <canvas id="myChart" width="400" height="250"></canvas>
                     </li>
-
                 </ul>
-
             </div>
             <div class="col-md-4">
-
                 <div class="page-separator">
                     <div class="page-separator__text">Test</div>
                 </div>
@@ -123,58 +97,50 @@
                         <a href="{% url 'personality:test' %}" class="btn btn-accent">Retake</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
-
 <!-- ChartJS -->
 <script src="{% static 'personality/chart.js/Chart.min.js' %}"></script>
 <script>
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Realistic', 'Investigative', 'Artistic', 'Social', 'Enterprising', 'Conventional'],
-            datasets: [{
-                label: 'Interest Profile - Result',
-                // data: [12, 19, 3, 5, 2, 3],
-                data: {{ results }},
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                },
-                maintainAspectRatio: false,
-                responsive: true,
-            }
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Realistic', 'Investigative', 'Artistic', 'Social', 'Enterprising', 'Conventional'],
+        datasets: [{
+            label: 'Interest Profile - Result',
+            // data: [12, 19, 3, 5, 2, 3],
+            data: { { results } },
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            },
+            maintainAspectRatio: false,
+            responsive: true,
         }
-    });
+    }
+});
 </script>
-
 {% endblock body_block %}

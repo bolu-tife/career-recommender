@@ -1,0 +1,453 @@
+{% extends "personality/base.html" %}
+{% load static %}
+{% block body_block %}
+<div class="form">
+    <div class="bg-primary pb-lg-64pt py-32pt">
+        <div class="container page__container">
+            <nav class="course-nav">
+                <a href="" class="disabled"><span class="material-icons">check_circle</span></a>
+                <a data-placement="bottom" href="" class="disabled"><span class="material-icons">check_circle</span></a>
+                <a data-placement="bottom" href="" class="disabled"><span class="material-icons">check_circle</span></a>
+                <a data-placement="bottom" href="" class="disabled"><span class="material-icons">check_circle</span></a>
+                <a data-placement="bottom" href="" class="disabled"><span class="material-icons text-primary">account_circle</span></a>
+            </nav>
+            <div class="d-flex flex-wrap align-items-end justify-content-end mb-16pt">
+                <h1 class="text-white flex m-0">60 Questions</h1>
+            </div>
+            <p class="hero__lead measure-hero-lead text-white-50"><span id="beg"></span> - <span id="end"></span></p>
+        </div>
+    </div>
+
+    <div class="page-separator">
+        <div class="page-separator__text"></div>
+    </div>
+
+    <div class="card stack" id='qna' style="width: calc(95.333% - 30px); margin-left: 30px;
+">
+        <div class="list-group list-group-flush">
+            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                    <div class="flex">
+                        <p class=" card-title mb-4pt hero__lead measure-hero-lead "> Questions</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex text-center d-flex align-items-center mr-16pt">
+                        <span class="text-50 text-headings text-uppercase mr-12pt">SD</span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt">D</span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt">U</span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt">L</span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt">SL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                    <div class="flex">
+                        <p class=" card-title mb-4pt hero__lead measure-hero-lead " id="question"></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex text-center d-flex align-items-center mr-16pt">
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer1" id="customCheck01" type="radio" class=" showcustom-control-input" checked value="1"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer1" id="customCheck02" type="radio" class=" showcustom-control-input" value="2"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer1" id="customCheck03" type="radio" class="showcustom-control-input" value="3"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer1" id="customCheck04" type="radio" class="showcustom-control-input" value="4"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer1" value="5" id="customCheck05" type="radio" class="showcustom-control-input"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                    <div class="flex">
+                        <p class=" card-title mb-4pt hero__lead measure-hero-lead " id="question1"></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex text-center d-flex align-items-center mr-16pt">
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer2" id="customCheck01" type="radio" class=" showcustom-control-input" checked value="1"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer2" id="customCheck02" type="radio" class=" showcustom-control-input" value="2"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer2" id="customCheck03" type="radio" class="showcustom-control-input" value="3"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer2" id="customCheck04" type="radio" class="showcustom-control-input" value="4"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer2" value="5" id="customCheck05" type="radio" class="showcustom-control-input"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                    <div class="flex">
+                        <p class=" card-title mb-4pt hero__lead measure-hero-lead " id="question2"></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex text-center d-flex align-items-center mr-16pt">
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer3" id="customCheck01" type="radio" class=" showcustom-control-input" checked value="1"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer3" id="customCheck02" type="radio" class=" showcustom-control-input" value="2"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer3" id="customCheck03" type="radio" class="showcustom-control-input" value="3"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer3" id="customCheck04" type="radio" class="showcustom-control-input" value="4"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer3" value="5" id="customCheck05" type="radio" class="showcustom-control-input"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                    <div class="flex">
+                        <p class=" card-title mb-4pt hero__lead measure-hero-lead " id="question3"></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex text-center d-flex align-items-center mr-16pt">
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer4" id="customCheck01" type="radio" class=" showcustom-control-input" checked value="1"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer4" id="customCheck02" type="radio" class=" showcustom-control-input" value="2"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer4" id="customCheck03" type="radio" class="showcustom-control-input" value="3"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer4" id="customCheck04" type="radio" class="showcustom-control-input" value="4"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer4" value="5" id="customCheck05" type="radio" class="showcustom-control-input"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                    <div class="flex">
+                        <p class=" card-title mb-4pt hero__lead measure-hero-lead " id="question4"></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex text-center d-flex align-items-center mr-16pt">
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer5" id="customCheck01" type="radio" class=" showcustom-control-input" checked value="1"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer5" id="customCheck02" type="radio" class=" showcustom-control-input" value="2"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer5" id="customCheck03" type="radio" class="showcustom-control-input" value="3"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer5" id="customCheck04" type="radio" class="showcustom-control-input" value="4"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer5" value="5" id="customCheck05" type="radio" class="showcustom-control-input"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                    <div class="flex">
+                        <p class=" card-title mb-4pt hero__lead measure-hero-lead " id="question5"></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex text-center d-flex align-items-center mr-16pt">
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer6" id="customCheck01" type="radio" class=" showcustom-control-input" checked value="1"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer6" id="customCheck02" type="radio" class=" showcustom-control-input" value="2"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer6" id="customCheck03" type="radio" class="showcustom-control-input" value="3"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer6" id="customCheck04" type="radio" class="showcustom-control-input" value="4"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer6" value="5" id="customCheck05" type="radio" class="showcustom-control-input"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                    <div class="flex">
+                        <p class=" card-title mb-4pt hero__lead measure-hero-lead " id="question6"></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex text-center d-flex align-items-center mr-16pt">
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer7" id="customCheck01" type="radio" class=" showcustom-control-input" checked value="1"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer7" id="customCheck02" type="radio" class=" showcustom-control-input" value="2"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer7" id="customCheck03" type="radio" class="showcustom-control-input" value="3"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer7" id="customCheck04" type="radio" class="showcustom-control-input" value="4"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer7" value="5" id="customCheck05" type="radio" class="showcustom-control-input"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                    <div class="flex">
+                        <p class=" card-title mb-4pt hero__lead measure-hero-lead " id="question7"></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex text-center d-flex align-items-center mr-16pt">
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer8" id="customCheck01" type="radio" class=" showcustom-control-input" checked value="1"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer8" id="customCheck02" type="radio" class=" showcustom-control-input" value="2"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer8" id="customCheck03" type="radio" class="showcustom-control-input" value="3"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer8" id="customCheck04" type="radio" class="showcustom-control-input" value="4"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer8" value="5" id="customCheck05" type="radio" class="showcustom-control-input"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                    <div class="flex">
+                        <p class=" card-title mb-4pt hero__lead measure-hero-lead " id="question8"></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex text-center d-flex align-items-center mr-16pt">
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer9" id="customCheck01" type="radio" class=" showcustom-control-input" checked value="1"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer9" id="customCheck02" type="radio" class=" showcustom-control-input" value="2"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer9" id="customCheck03" type="radio" class="showcustom-control-input" value="3"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer9" id="customCheck04" type="radio" class="showcustom-control-input" value="4"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer9" value="5" id="customCheck05" type="radio" class="showcustom-control-input"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                    <div class="flex">
+                        <p class=" card-title mb-4pt hero__lead measure-hero-lead " id="question9"></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex text-center d-flex align-items-center mr-16pt">
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer10" id="customCheck01" type="radio" class=" showcustom-control-input" checked value="1"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer10" id="customCheck02" type="radio" class=" showcustom-control-input" value="2"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer10" id="customCheck03" type="radio" class="showcustom-control-input" value="3"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer10" id="customCheck04" type="radio" class="showcustom-control-input" value="4"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer10" value="5" id="customCheck05" type="radio" class="showcustom-control-input"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                    <div class="flex">
+                        <p class=" card-title mb-4pt hero__lead measure-hero-lead " id="question10"></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex text-center d-flex align-items-center mr-16pt">
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer11" id="customCheck01" type="radio" class=" showcustom-control-input" checked value="1"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer11" id="customCheck02" type="radio" class=" showcustom-control-input" value="2"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer11" id="customCheck03" type="radio" class="showcustom-control-input" value="3"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer11" id="customCheck04" type="radio" class="showcustom-control-input" value="4"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer11" value="5" id="customCheck05" type="radio" class="showcustom-control-input"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item d-flex flex-column flex-sm-row align-items-sm-center px-12pt">
+                <div class="flex d-flex align-items-center mr-sm-16pt mb-8pt mb-sm-0">
+                    <div class="flex">
+                        <p class=" card-title mb-4pt hero__lead measure-hero-lead " id="question11"></p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="flex text-center d-flex align-items-center mr-16pt">
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer12" id="customCheck01" type="radio" class=" showcustom-control-input" checked value="1"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer12" id="customCheck02" type="radio" class=" showcustom-control-input" value="2"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer12" id="customCheck03" type="radio" class="showcustom-control-input" value="3"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer12" id="customCheck04" type="radio" class="showcustom-control-input" value="4"></span>
+                        <span class="text-50 text-headings text-uppercase mr-12pt"><input name="answer12" value="5" id="customCheck05" type="radio" class="showcustom-control-input"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button style="
+    float: right;font-size: 1.4rem;color: blue;border-color: blue;background-color: white;" class="btn btn-outline-secondary" id="getWord">Next</button>
+</div>
+
+<div id='token' style="visibility:hidden">{%csrf_token%}</div>
+<div class="content">
+    <div class="container">
+        <div class="form">
+            <input style="visibility:hidden" type="text" id="guess" name="word" class="text-box"><br>
+            <div class="button-block">
+                <button style="visibility:hidden" class="button" id="check">Check</button>
+                <button style="visibility:hidden" class="button" id="getWord">GetWord</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id='token' style="visibility:hidden">{%csrf_token%}</div>
+<script>
+const wordList = {{ data | safe }}
+
+const level1 = {{ area | safe }};
+console.log(level1)
+console.log(wordList)
+
+
+const difficultWords = [];
+var checkButton = document.getElementById("check");
+var getWordButton = document.getElementById("getWord");
+
+var input = document.getElementById('guess').value.toLowerCase();
+var randomVar = 0;
+var count = 0;
+// var total = wordLimit; 
+var count = 0;
+var total = 0
+var sum = 0;
+var rscore = 0;
+var score = 0;
+var accuracy = 0;
+var totalAccuracy = accuracy + "%";
+var Realistic = 0;
+var Investigative = 0;
+var Artistic = 0;
+var Social = 0;
+var Enterprising = 0;
+var Conventional = 0
+
+getWordButton.disabled = false;
+checkButton.disabled = false;
+document.getElementById("question").innerHTML = wordList[randomVar]
+document.getElementById("question1").innerHTML = wordList[randomVar + 1]
+document.getElementById("question2").innerHTML = wordList[randomVar + 2]
+document.getElementById("question3").innerHTML = wordList[randomVar + 3]
+document.getElementById("question4").innerHTML = wordList[randomVar + 4]
+document.getElementById("question5").innerHTML = wordList[randomVar + 5]
+document.getElementById("question6").innerHTML = wordList[randomVar + 6]
+document.getElementById("question7").innerHTML = wordList[randomVar + 7]
+document.getElementById("question8").innerHTML = wordList[randomVar + 8]
+document.getElementById("question9").innerHTML = wordList[randomVar + 9]
+document.getElementById("question10").innerHTML = wordList[randomVar + 10]
+document.getElementById("question11").innerHTML = wordList[randomVar + 11]
+
+document.getElementById("beg").innerHTML = randomVar + 1
+document.getElementById("end").innerHTML = randomVar + 12
+
+
+var callWord = (randomVar) => {
+
+    if (count <= 4) {
+
+
+        document.getElementById("question").innerHTML = wordList[randomVar]
+        document.getElementById("question1").innerHTML = wordList[randomVar + 1]
+        document.getElementById("question2").innerHTML = wordList[randomVar + 2]
+        document.getElementById("question3").innerHTML = wordList[randomVar + 3]
+        document.getElementById("question4").innerHTML = wordList[randomVar + 4]
+        document.getElementById("question5").innerHTML = wordList[randomVar + 5]
+        document.getElementById("question6").innerHTML = wordList[randomVar + 6]
+        document.getElementById("question7").innerHTML = wordList[randomVar + 7]
+        document.getElementById("question8").innerHTML = wordList[randomVar + 8]
+        document.getElementById("question9").innerHTML = wordList[randomVar + 9]
+        document.getElementById("question10").innerHTML = wordList[randomVar + 10]
+        document.getElementById("question11").innerHTML = wordList[randomVar + 11]
+        document.getElementById("beg").innerHTML = randomVar + 1
+        document.getElementById("end").innerHTML = randomVar + 12
+        // var input = document.getElementById('guess').value;
+
+    } else {
+
+        document.getElementById('question').style.display = "none";
+        document.getElementById('question1').style.display = "none";
+        document.getElementById('question2').style.display = "none";
+
+        document.getElementById('question3').style.display = "none";
+        document.getElementById('question4').style.display = "none";
+        document.getElementById('question5').style.display = "none";
+
+        document.getElementById('question6').style.display = "none";
+        document.getElementById('question7').style.display = "none";
+        document.getElementById('question8').style.display = "none";
+
+        document.getElementById('question9').style.display = "none";
+        document.getElementById('question10').style.display = "none";
+        document.getElementById('question11').style.display = "none";
+        document.getElementById('qna').style.display = "none";
+
+        document.getElementById('guess').style.display = "none";
+        getWordButton.style.display = "none";
+        checkButton.style.display = "none";
+
+        getWordButton.disabled = true;
+        checkButton.disabled = true;
+        const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+        let form = new FormData()
+        form.append('Realistic', Realistic)
+        form.append('Investigative', Investigative)
+        form.append('Artistic', Artistic)
+        form.append('Social', Social)
+        form.append('Enterprising', Enterprising)
+        form.append('Conventional', Conventional)
+
+        // form.append('csrfmiddlewaretoken', '{{csrf_token}}')
+
+        // fetch('save/', {
+        //     method: 'POST',
+        //     body: form,
+        // }).then(res => { res.json() }).then(data => console.log(data));
+
+
+        var xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function() {
+            console.log("hit")
+            if (this.status == 302) {
+                var json = JSON.parse(this.responseText);
+
+                console.log(json.url);
+                window.location.href = json.url;
+            }
+        };
+
+        xhttp.open("POST", "/personalitytest/testtwo/testtwosave/", true);
+        xhttp.setRequestHeader("X-CSRFToken", csrftoken);
+        // var data = new FormData();
+        // data.append('data', blob, filename);
+        xhttp.send(form);
+
+
+    }
+
+}
+
+var validateInput = (randomVar) => {
+    // var input = document.getElementById('guess').value.toLowerCase();
+    // console($('input[name="answer"]:checked').val())
+    var input1 = parseInt(document.querySelector('input[name="answer1"]:checked').value)
+    var input2 = parseInt(document.querySelector('input[name="answer2"]:checked').value)
+    var input3 = parseInt(document.querySelector('input[name="answer3"]:checked').value)
+    var input4 = parseInt(document.querySelector('input[name="answer4"]:checked').value)
+    var input5 = parseInt(document.querySelector('input[name="answer5"]:checked').value)
+    var input6 = parseInt(document.querySelector('input[name="answer6"]:checked').value)
+    var input7 = parseInt(document.querySelector('input[name="answer7"]:checked').value)
+    var input8 = parseInt(document.querySelector('input[name="answer8"]:checked').value)
+    var input9 = parseInt(document.querySelector('input[name="answer9"]:checked').value)
+    var input10 = parseInt(document.querySelector('input[name="answer10"]:checked').value)
+    var input11 = parseInt(document.querySelector('input[name="answer11"]:checked').value)
+    var input12 = parseInt(document.querySelector('input[name="answer12"]:checked').value)
+    // console.log(input)
+    // console.log(randomVar + "from check button")
+    if ('Realistic' === level1[randomVar]) {
+
+        Realistic += input;
+    }
+    else if ('Investigative' === level1[randomVar]) {
+
+        Investigative += input;
+    }
+    else if ('Artistic' === level1[randomVar]) {
+
+        Artistic += input;
+    }
+    else if ('Social' === level1[randomVar]) {
+
+        Social += input;
+    }
+    else if ('Enterprising' === level1[randomVar]) {
+
+        Enterprising += input;
+    }
+    else {
+
+        Conventional += input;
+    }
+
+    console.log(Investigative);
+
+
+
+}
+// var speech = new SpeechSynthesisUtterance();
+
+checkButton.addEventListener("click", function() {
+
+    // document.getElementById('answer').value = '';
+})
+
+getWordButton.addEventListener("click", () => {
+    validateInput(randomVar);
+    // randomVar = Math.floor(Math.random() * level1.length);
+    randomVar += 12;
+    count++;
+    callWord(randomVar);
+})
+</script>
+{% endblock %}
