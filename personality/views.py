@@ -9,156 +9,7 @@ from django.contrib.auth.models import User
 import json
 from django.http.response import JsonResponse
 
-a = """
-[
 
-    {
-        "name": "Realistic1",
-        "label": "Build kitchen cabinets",
-        "type": "radio",
-        "choices": [
-            {"name": "Strongly Dislike", "value":1},
-            {"name": "DisLike", "value":2},
-            {"name": "Unsure", "value":3},
-            {"name": "Like", "value":4},
-            {"name": "Strongly Like", "value":5}
-        ]
-    },
-    {
-        "name": "Realistic2",
-        "label": "Lay brick or tile",
-        "type": "radio",
-        "choices": [
-            {"name": "Strongly Dislike", "value":1},
-            {"name": "DisLike", "value":2},
-            {"name": "Unsure", "value":3},
-            {"name": "Like", "value":4},
-            {"name": "Strongly Like", "value":5}
-        ]
-    },
-    {
-        "name": "Investigative1",
-        "label": "Develop a new medicine",
-        "type": "radio",
-        "choices": [
-            {"name": "Strongly Dislike", "value":1},
-            {"name": "DisLike", "value":2},
-            {"name": "Unsure", "value":3},
-            {"name": "Like", "value":4},
-            {"name": "Strongly Like", "value":5}
-        ]
-    },
-    {
-        "name": "Investigative2",
-        "label": "Study ways to reduce water pollution",
-        "type": "radio",
-        "choices": [
-            {"name": "Strongly Dislike", "value":1},
-            {"name": "DisLike", "value":2},
-            {"name": "Unsure", "value":3},
-            {"name": "Like", "value":4},
-            {"name": "Strongly Like", "value":5}
-        ]
-    },
-    {
-        "name": "Artistic1",
-        "label": "Write books or plays",
-        "type": "radio",
-        "choices": [
-            {"name": "Strongly Dislike", "value":1},
-            {"name": "DisLike", "value":2},
-            {"name": "Unsure", "value":3},
-            {"name": "Like", "value":4},
-            {"name": "Strongly Like", "value":5}
-        ]
-    },
-    {
-        "name": "Artistic2",
-        "label": "Play a musical instrument",
-        "type": "radio",
-        "choices": [
-            {"name": "Strongly Dislike", "value":1},
-            {"name": "DisLike", "value":2},
-            {"name": "Unsure", "value":3},
-            {"name": "Like", "value":4},
-            {"name": "Strongly Like", "value":5}
-        ]
-    },
-    {
-        "name": "Social1",
-        "label": "Teach an individual an exercise routine",
-        "type": "radio",
-        "choices": [
-            {"name": "Strongly Dislike", "value":1},
-            {"name": "DisLike", "value":2},
-            {"name": "Unsure", "value":3},
-            {"name": "Like", "value":4},
-            {"name": "Strongly Like", "value":5}
-        ]
-    },
-    {
-        "name": "Social2",
-        "label": "Help people with personal or emotional problems",
-        "type": "radio",
-        "choices": [
-            {"name": "Strongly Dislike", "value":1},
-            {"name": "DisLike", "value":2},
-            {"name": "Unsure", "value":3},
-            {"name": "Like", "value":4},
-            {"name": "Strongly Like", "value":5}
-        ]
-    },
-    {
-        "name": "Enterprising1",
-        "label": "Buy and sell stocks and bonds",
-        "type": "radio",
-        "choices": [
-            {"name": "Strongly Dislike", "value":1},
-            {"name": "DisLike", "value":2},
-            {"name": "Unsure", "value":3},
-            {"name": "Like", "value":4},
-            {"name": "Strongly Like", "value":5}
-        ]
-    },
-    {
-        "name": "Enterprising2",
-        "label": "Manage a retail store",
-        "type": "radio",
-        "choices": [
-            {"name": "Strongly Dislike", "value":1},
-            {"name": "DisLike", "value":2},
-            {"name": "Unsure", "value":3},
-            {"name": "Like", "value":4},
-            {"name": "Strongly Like", "value":5}
-        ]
-    },
-    {
-        "name": "Conventional1",
-        "label": "Develop a spreadsheet using computer software",
-        "type": "radio",
-        "choices": [
-            {"name": "Strongly Dislike", "value":1},
-            {"name": "DisLike", "value":2},
-            {"name": "Unsure", "value":3},
-            {"name": "Like", "value":4},
-            {"name": "Strongly Like", "value":5}
-        ]
-    },
-    {
-        "name": "Conventional2",
-        "label": "Proofread records or forms",
-        "type": "radio",
-        "choices": [
-            {"name": "Strongly Dislike", "value":1},
-            {"name": "DisLike", "value":2},
-            {"name": "Unsure", "value":3},
-            {"name": "Like", "value":4},
-            {"name": "Strongly Like", "value":5}
-        ]
-    }
-]
-
-"""
 
 
 @login_required(login_url='login')
@@ -263,13 +114,13 @@ def result(request):
                'results': record,
                'message': message,
                'profile_test': 'active',
-               'Realistic': record[0]*5,
-               'Investigative':record[1]*5,
-               'Artistic':record[2]*5,
-               'Social': record[3]*5,
-               'Enterprising':record[4]*5,
-               'Conventional': record[5]*5,
-               
+               'Realistic': record[0],
+               'Investigative':record[1],
+               'Artistic':record[2],
+               'Social': record[3],
+               'Enterprising':record[4],
+               'Conventional': record[5],
+
                'crumb': 'Profile Test'}
     print(results, record, "uu")
 
@@ -301,19 +152,19 @@ def take(request):
         }
         return render(request, 'personality/take.html', context)
     except:
-  
+
         return render(request, 'personality/take.html', {})
 
 def save(request):
     if request.method == 'POST':
         u = User.objects.get(username=request.user.get_username())
         person = student.objects.get(Identification_no=u)
-        Realistic = float(request.POST.get('Realistic'))
-        Investigative = float(request.POST.get('Investigative'))
-        Artistic = float(request.POST.get('Artistic'))
-        Social = float(request.POST.get('Social'))
-        Enterprising = float(request.POST.get('Enterprising'))
-        Conventional = float(request.POST.get('Conventional'))
+        Realistic = int(request.POST.get('Realistic'))
+        Investigative = int(request.POST.get('Investigative'))
+        Artistic = int(request.POST.get('Artistic'))
+        Social = int(request.POST.get('Social'))
+        Enterprising = int(request.POST.get('Enterprising'))
+        Conventional = int(request.POST.get('Conventional'))
 
         result_url = reverse('personality:result')
 
@@ -328,7 +179,7 @@ def save(request):
             # person = student.objects.get(Identification_no=person)
             print(person)
             user_pers, created = User_Personality.objects.update_or_create(user_id=person, defaults={
-                                                                           'Realistic': Realistic/5, 'Investigative': Investigative/5, 'Artistic': Artistic/5, 'Social': Social/5, 'Enterprising': Enterprising/5, 'Conventional': Conventional/5, })
+                                                                           'Realistic': Realistic, 'Investigative': Investigative, 'Artistic': Artistic, 'Social': Social, 'Enterprising': Enterprising, 'Conventional': Conventional, })
             print('hello', user_pers)
 
             
@@ -378,12 +229,12 @@ def testtwosave(request):
     if request.method == 'POST':
         u = User.objects.get(username=request.user.get_username())
         person = student.objects.get(Identification_no=u)
-        Realistic = float(request.POST.get('Realistic'))
-        Investigative = float(request.POST.get('Investigative'))
-        Artistic = float(request.POST.get('Artistic'))
-        Social = float(request.POST.get('Social'))
-        Enterprising = float(request.POST.get('Enterprising'))
-        Conventional = float(request.POST.get('Conventional'))
+        Realistic = int(request.POST.get('Realistic'))
+        Investigative = int(request.POST.get('Investigative'))
+        Artistic = int(request.POST.get('Artistic'))
+        Social = int(request.POST.get('Social'))
+        Enterprising = int(request.POST.get('Enterprising'))
+        Conventional = int(request.POST.get('Conventional'))
 
         result_url = reverse('personality:result')
 
@@ -398,7 +249,7 @@ def testtwosave(request):
             # person = student.objects.get(Identification_no=person)
             print(person)
             user_pers, created = User_Personality.objects.update_or_create(user_id=person, defaults={
-                                                                           'Realistic': Realistic/5, 'Investigative': Investigative/5, 'Artistic': Artistic/5, 'Social': Social/5, 'Enterprising': Enterprising/5, 'Conventional': Conventional/5, })
+                                                                           'Realistic': Realistic, 'Investigative': Investigative, 'Artistic': Artistic, 'Social': Social, 'Enterprising': Enterprising, 'Conventional': Conventional, })
             print('hello', user_pers)
 
             

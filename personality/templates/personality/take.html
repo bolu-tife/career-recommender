@@ -15,7 +15,8 @@
             </div>
             <p class="hero__lead measure-hero-lead text-white-50" id="question"></p>
             <button style="
-    float: right;font-size: 1.4rem;color: blue;border-color: blue;background-color: white;" class="btn btn-outline-secondary" id="getWord">Next</button>
+    float: left;font-size: 1.4rem;color: blue;border-color: blue;background-color: white;" 
+    class="btn btn-outline-secondary" id="getWord">Next</button>
         </div>
     </div>
     <div class="container page__container">
@@ -113,7 +114,7 @@ var input = document.getElementById('guess').value.toLowerCase();
 var randomVar = 0;
 var count = 0;
 // var total = wordLimit; 
-var count = 0;
+var count = 1;
 var total = 0
 var sum = 0;
 var rscore = 0;
@@ -134,7 +135,7 @@ document.getElementById("question").innerHTML = wordList[randomVar]
 
 var callWord = (randomVar) => {
 
-    if (count <= 10) {
+    if (count <= 60) {
 
 
         document.getElementById("question").innerHTML = wordList[randomVar]

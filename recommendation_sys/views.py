@@ -102,18 +102,18 @@ def rankings_acad(request):
     u = User.objects.get(username=request.user.get_username())
     person = student.objects.get(Identification_no=u)
     student_id = str(person.id-1)
-    results = None
-    record = [0.0 for i in range(6)]
+    # results = None
+    # record = [0.0 for i in range(6)]
 
-    if User_Personality.objects.filter(user_id=person):
-        results = list(User_Personality.objects.filter(
-            user_id=person).values())
-        record[0] = results[0]['Realistic']
-        record[1] = results[0]['Investigative']
-        record[2] = results[0]['Artistic']
-        record[3] = results[0]['Social']
-        record[4] = results[0]['Enterprising']
-        record[5] = results[0]['Conventional']
+    # if User_Personality.objects.filter(user_id=person):
+    #     results = list(User_Personality.objects.filter(
+    #         user_id=person).values())
+    #     record[0] = results[0]['Realistic']
+    #     record[1] = results[0]['Investigative']
+    #     record[2] = results[0]['Artistic']
+    #     record[3] = results[0]['Social']
+    #     record[4] = results[0]['Enterprising']
+    #     record[5] = results[0]['Conventional']
 
     context = {
 
@@ -135,12 +135,12 @@ def rankings_pers(request):
     if User_Personality.objects.filter(user_id=person):
         results = list(User_Personality.objects.filter(
             user_id=person).values())
-        record[0] = results[0]['Realistic']
-        record[1] = results[0]['Investigative']
-        record[2] = results[0]['Artistic']
-        record[3] = results[0]['Social']
-        record[4] = results[0]['Enterprising']
-        record[5] = results[0]['Conventional']
+        record[0] = results[0]['Realistic']/5
+        record[1] = results[0]['Investigative']/5
+        record[2] = results[0]['Artistic']/5
+        record[3] = results[0]['Social']/5
+        record[4] = results[0]['Enterprising']/5
+        record[5] = results[0]['Conventional']/5
 
     context = {
 
@@ -162,12 +162,12 @@ def rankings_both(request):
     if User_Personality.objects.filter(user_id=person):
         results = list(User_Personality.objects.filter(
             user_id=person).values())
-        record[0] = results[0]['Realistic']
-        record[1] = results[0]['Investigative']
-        record[2] = results[0]['Artistic']
-        record[3] = results[0]['Social']
-        record[4] = results[0]['Enterprising']
-        record[5] = results[0]['Conventional']
+        record[0] = results[0]['Realistic']/5
+        record[1] = results[0]['Investigative']/5
+        record[2] = results[0]['Artistic']/5
+        record[3] = results[0]['Social']/5
+        record[4] = results[0]['Enterprising']/5
+        record[5] = results[0]['Conventional']/5
 
     context = {
 

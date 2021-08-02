@@ -235,8 +235,7 @@
             </div>
         </div>
     </div>
-    <button style="
-    float: right;font-size: 1.4rem;color: blue;border-color: blue;background-color: white;" class="btn btn-outline-secondary" id="getWord">Next</button>
+    <button style=" font-size: 1.4rem;color: blue;border-color: blue;background-color: white; align-items: center;margin-left: 45%;" class="btn btn-outline-secondary" id="getWord">Next</button>
 </div>
 
 <div id='token' style="visibility:hidden">{%csrf_token%}</div>
@@ -403,48 +402,25 @@ var validateInput = (randomVar) => {
     var input10 = parseInt(document.querySelector('input[name="answer10"]:checked').value)
     var input11 = parseInt(document.querySelector('input[name="answer11"]:checked').value)
     var input12 = parseInt(document.querySelector('input[name="answer12"]:checked').value)
-    // console.log(input)
-    // console.log(randomVar + "from check button")
-    if ('Realistic' === level1[randomVar]) {
-
-        Realistic += input;
-    }
-    else if ('Investigative' === level1[randomVar]) {
-
-        Investigative += input;
-    }
-    else if ('Artistic' === level1[randomVar]) {
-
-        Artistic += input;
-    }
-    else if ('Social' === level1[randomVar]) {
-
-        Social += input;
-    }
-    else if ('Enterprising' === level1[randomVar]) {
-
-        Enterprising += input;
-    }
-    else {
-
-        Conventional += input;
-    }
-
-    console.log(Investigative);
+    
+    Realistic += input1 + input2;
+    Investigative += input3 + input4;
+    Artistic += input5 + input6;
+    Social += input7 + input8;
+    Enterprising += input9 + input10;
+    Conventional += input11 + input12;
+    
 
 
 
 }
-// var speech = new SpeechSynthesisUtterance();
 
 checkButton.addEventListener("click", function() {
 
-    // document.getElementById('answer').value = '';
-})
+   
 
 getWordButton.addEventListener("click", () => {
     validateInput(randomVar);
-    // randomVar = Math.floor(Math.random() * level1.length);
     randomVar += 12;
     count++;
     callWord(randomVar);

@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <div class="page-separator">
+    <div class="page-separator" style="visibility:hidden">
         {# <div class="page-separator__text">Result</div> #}
     </div>
     <div class="container page__container">
@@ -94,7 +94,7 @@
                 </div>
                 <div class="card">
                     <div class="card-body text-center">
-                        <a href="{% url 'personality:test' %}" class="btn btn-accent">Retake</a>
+                        <a href="{% url 'personality:testtwo' %}" class="btn btn-accent">Retake</a>
                     </div>
                 </div>
             </div>
@@ -107,6 +107,7 @@
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
+
     data: {
         labels: ['Realistic', 'Investigative', 'Artistic', 'Social', 'Enterprising', 'Conventional'],
         datasets: [{
@@ -130,17 +131,20 @@ var myChart = new Chart(ctx, {
                 'rgba(255, 159, 64, 1)'
             ],
             borderWidth: 1
-        }]
+        }],
+
     },
     options: {
+        indexAxis: 'y',
         scales: {
-            y: {
+            'y': {
                 beginAtZero: true
-            },
-            maintainAspectRatio: false,
-            responsive: true,
-        }
+            }
+        },
+        // maintainAspectRatio: false,
+        // responsive: true,
     }
+
 });
 </script>
 {% endblock body_block %}
